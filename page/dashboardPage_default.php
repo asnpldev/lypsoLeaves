@@ -1,15 +1,10 @@
-<?php include('template/header.php'); ?>
-<?php include('template/menu.php'); ?>
+<?php include ('../page/template/header.php'); ?>
 
-
-
-
-<div class="row">
-
-
-
-
+<div class="card-header">
+    Mes demandes de congés
+</div>
+<div class="card-body">
+    <?php include('../page/vacation/index.php'); ?>
 </div>
 
-
-<?php include('template/footer.php'); ?>
+<?php include ('../page/template/footer.php'); ?>

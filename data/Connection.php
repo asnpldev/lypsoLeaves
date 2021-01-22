@@ -18,10 +18,10 @@ class Connection {
         
     }
 
-    private function _get() {
-        $dsn = 'mysql:dbname='.$GLOBALS['ENV']['DB_DATABASE'].';host='.$GLOBALS['ENV']['DB_HOST'];
-        $user = $GLOBALS['ENV']['DB_USERNAME'];
-        $password = $GLOBALS['ENV']['DB_PASSWORD'];
+    private  static function _get() {
+        $dsn = 'mysql:dbname='.ENV['DB_DATABASE'].';host='.ENV['DB_HOST'];
+        $user = ENV['DB_USERNAME'];
+        $password = ENV['DB_PASSWORD'];
 
         try {
             self::$_pdo = new PDO($dsn, $user, $password);
@@ -32,7 +32,7 @@ class Connection {
     }
 
 
-    public function safeQuery($query,$array){
+    public static function safeQuery($query,$array){
         if (is_null(self::$_pdo)) {
             self::_get();
         }
