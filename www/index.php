@@ -1,5 +1,5 @@
 <?php 
-//session_start();
+session_start();
 include ('../config/env.php');
 
 
@@ -28,9 +28,9 @@ if (isset($_GET['action'])) {
     $action=$_GET['action'];
 }
 
-//if (!isset($_SESSION['id'])){
-//    $route='authenticate';
-//}
+if (!isset($_SESSION['id'])){
+    $route='authenticate';
+}
 
 switch($route){
 
