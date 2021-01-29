@@ -15,3 +15,12 @@
         </p>
     </a>
 </li>
+
+<li class="nav-item has-treeview">
+    <a href="?route=vacation" class="nav-link">
+        <i class="nav-icon fas fa-tasks"></i>
+        <p>
+            Demande de congés
+        </p>
+    </a>
+</li>
