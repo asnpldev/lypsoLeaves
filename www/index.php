@@ -10,8 +10,7 @@ include('../config/env.php');
 include('../data/Connection.php');
 include('../data/userData.php');
 include('../control/authenticateControl.php');
-include('../control/dashboardControl.php');
-include('../control/vacationControl.php');
+include('../control/dashboardControl.php'); 
 include ('../page/fct_date.php');
 include ('../page/fct_vacation.php');
 
