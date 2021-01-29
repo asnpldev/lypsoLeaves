@@ -16,7 +16,7 @@ function vacationControl($userAction){
 function vacationControl_defaultAction()
 {
     $tabTitle="Demande de congé";
-    echo $_SESSION['login']);
+
     include('../page/vacationPage_default.php');
 }
 
