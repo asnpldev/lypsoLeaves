@@ -7,7 +7,7 @@
     <title><?= ENV['APP_NAME'] ?></title>
 </head>
 <body>
-<form role="form">
+<form role="form" method="POST" action="?route=vacation&action=store">
     <div class="box-body">
         <div class="form-group">
             <label for="inputStartDate">Date de début de congé</label>
