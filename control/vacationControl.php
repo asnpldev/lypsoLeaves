@@ -30,7 +30,7 @@ function vacationControl_storeAction()
    $datas['salle_id']=$_POST['idSalleResa'];
    $datas['ligue_id']=$_SESSION['ligue_id'];
    
-   $test=reserverData_store($datas);
+   $test=vacationControl_storeAction($datas);
    
    if ($test>0){
        $message="La salle a été réservée avec succès.";
