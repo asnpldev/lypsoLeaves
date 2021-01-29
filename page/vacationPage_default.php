@@ -1,31 +1,28 @@
-<?php include ('../page/template/header.php'); ?>
+<?php include('../page/template/header.php'); ?>
+<div class="card-body">
+    <div class="row">
+        <div class="col-md-6">
+            <form role="form" method="POST" action="?route=vacation&action=store">
+                <div class="box-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="inputStartDate">Date de début de congé</label>
+                                <input type="date" name="inputStartDate" class="form-control" placeholder="Choose Date">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEndDate">Date de fin de congé</label>
+                                <input type="date" name="inputEndDate" class="form-control" placeholder="Choose Date">
+                            </div>
+                        </div>
+                    </div>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title><?= ENV['APP_NAME'] ?></title>
-</head>
-<body>
-<form role="form" method="POST" action="?route=vacation&action=store">
-    <div class="box-body">
-        <div class="form-group">
-            <label for="inputStartDate">Date de début de congé</label>
-            <input type="date" name="inputStartDate" class="form-control" placeholder="Choose Date">
-            <label for="inputEndDate">Date de fin de congé</label>
-            <input type="date" name="inputEndDate" class="form-control" placeholder="Choose Date">
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Check me out
-            </label>
+                </div>
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Confirmer</button>
+                </div>
+            </form>
         </div>
     </div>
-    <!-- /.box-body -->
-
-    <div class="box-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
-</body>
-</html>
+</div>
