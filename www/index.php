@@ -1,18 +1,26 @@
 <?php
 
 session_start();
-error_reporting(E_ALL);
-ini_set('display_errors',true);
-ini_set('display_startup_errors',true);
+//error_reporting(E_ALL);
+//ini_set('display_errors',true);
+//ini_set('display_startup_errors',true);
 
-
+//DB CONNECTION
 include('../config/env.php');
+
+
+//DATAS
 include('../data/Connection.php');
 include('../data/userData.php');
+
+
+//CONTROLLERS
 include('../control/authenticateControl.php');
-include('../control/dashboardControl.php'); 
-include ('../page/fct_date.php');
-include ('../page/fct_vacation.php');
+include('../control/dashboardControl.php');
+
+
+/*include ('../page/fct_date.php');
+include ('../page/fct_vacation.php');*/
 
 $route='';
 
@@ -35,8 +43,8 @@ switch ($route){
     case 'dashboard':
         dashboardControl($action);
     break;
-    case 'department':
-//        departmentControl($action);
+    case 'management':
+        managementControl($action);
     break;
     case 'user':
 //        userControl($action);
