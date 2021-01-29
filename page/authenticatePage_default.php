@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,12 +21,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="."><?= ENV['APP_NAME'] ?></a>
+        <a href="."><?= ENV['APP_NAME'] ?> <small><?= ENV['APP_VERSION']?></small></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">Formulaire de connexion</p>
             <?php
             if($message!=''){
                 echo $message;
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Mot de passe">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -50,17 +50,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <div class="icheck-primary">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">
-                                Remember Me
-                            </label>
-                        </div>
+                    <div class="col-7">
+<!--                        <div class="icheck-primary">-->
+<!--                            <input type="checkbox" id="remember">-->
+<!--                            <label for="remember">-->
+<!--                                Remember Me-->
+<!--                            </label>-->
+<!--                        </div>-->
                     </div>
                     <!-- /.col -->
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    <div class="col-5">
+                        <button type="submit" class="btn btn-primary btn-block">Connexion</button>
                     </div>
                     <!-- /.col -->
                 </div>
