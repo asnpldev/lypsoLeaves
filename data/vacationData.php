@@ -1,7 +1,6 @@
 <?php
 
 function vacation_storeAction($datas){
-    //$request="SELECT * FROM vacation WHERE status=0";
-    $request="INSERT INTO vacation VALUES($datas[start])";
+    $request='INSERT INTO vacation VALUES(NULL, $datas[start], $datas[end], $datas[user_id], datas[status])';
     return Connection::exec($request);
 }
