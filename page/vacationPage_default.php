@@ -11,9 +11,9 @@
     <div class="box-body">
         <div class="form-group">
             <label for="inputStartDate">Date de début de congé</label>
-            <input type="date" class="form-control" id="inputStartDate" placeholder="Choose Date">
+            <input type="date" name="inputStartDate" class="form-control" placeholder="Choose Date">
             <label for="inputEndDate">Date de fin de congé</label>
-            <input type="date" class="form-control" id="inputEndDate" placeholder="Choose Date">
+            <input type="date" name="inputEndDate" class="form-control" placeholder="Choose Date">
         </div>
         <div class="checkbox">
             <label>

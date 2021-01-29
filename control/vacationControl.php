@@ -16,18 +16,17 @@ function vacationControl($userAction){
 function vacationControl_defaultAction()
 {
     $tabTitle="Demande de congé";
-
     include('../page/vacationPage_default.php');
 }
 
 function vacationControl_storeAction()
 {
    // Code pour la route vacation et l'action store
-   $datas['start']=$_POST['startResa'];
-   $datas['end']=$_POST['endResa'];
-   $datas['user_id']=$_SESSION['id'];
-   $datas['status']=$_POST['statusResa'];
-
+   $datas['start']=$_POST['inputStartDate'];
+   $datas['end']=$_POST['inputEndDate'];
+   $datas['user_id']=$_SESSION['user']['id'];
+   $datas['status']=1;
+   var_dump($datas);
    $test=vacation_storeAction($datas);
 
    if ($test>0){
