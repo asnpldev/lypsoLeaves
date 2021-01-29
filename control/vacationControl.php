@@ -25,7 +25,7 @@ function vacationControl_storeAction()
    $datas['start']=$_POST['inputStartDate'];
    $datas['end']=$_POST['inputEndDate'];
    $datas['user_id']=$_SESSION['user']['id'];
-    var_dump($datas);
+
    $test=vacation_storeAction($datas);
 
    if ($test>0){
