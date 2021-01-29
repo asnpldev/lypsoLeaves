@@ -44,9 +44,14 @@
             <!-- Sidebar user (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
-                    <a href=".?route=User" class="d-block"><?= $_SESSION['user']['firstname'].' '.$_SESSION['user']['lastname'] ?> </a>
+                    <a href="#" class="d-block"><?= $_SESSION['user']['firstname'].' '.$_SESSION['user']['lastname'] ?> </a>
+                    <br>
+                    <a href="?route=authenticate&action=logout" class="btn btn-danger btn-xs">Déconnexion</a>
                 </div>
+
             </div>
+
+
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">

@@ -16,8 +16,7 @@
                 <th>Departement</th>
                 <th>Début</th>
                 <th>Fin</th>
-                <th>Status</th>
-                <th></th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -32,7 +31,7 @@
                     <td><?php echo $actualRequest['nom'] ?></td>
                     <td><?php echo date('d/m/y', strtotime($actualRequest['start']))?></td>
                     <td><?php echo date('d/m/y', strtotime($actualRequest['end'])) ?></td>
-                    <td><?php echo $actualRequest['status']?></td>
+
                     <td><a class="btn bg-olive btn-xs">Accepter</a>
                         &nbsp;
                         <a class="btn bg-navy btn-xs">Annuler</a>
