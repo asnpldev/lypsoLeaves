@@ -11,7 +11,7 @@
     <a href="?route=management" class="nav-link">
         <i class="nav-icon fas fa-tasks"></i>
         <p>
-            Management
+            Management <sup><span class="badge badge-primary">EN COURS</span></sup>
         </p>
     </a>
 </li>
