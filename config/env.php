@@ -3,7 +3,7 @@
 const ENV =[
     // Paramètres pour l'application
     'APP_NAME'    => 'Lypso',
-    'APP_VERSION' => 'v0',
+    'APP_VERSION' => 'v1',
     // Paramètres pour l'accès à la base de données
     'DB_HOST'     => '127.0.0.1',
     'DB_DATABASE' => 'lypso_v0',
