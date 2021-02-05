@@ -16,7 +16,7 @@ function vacationControl($userAction){
 function vacationControl_defaultAction()
 {
     $tabTitle="Demande de congé";
-    $vacationRequest=user_findVacations($_SESSION['user']->getId());
+    $vacationRequest=user_findVacations();
     include('../page/vacationPage_default.php');
 }
 

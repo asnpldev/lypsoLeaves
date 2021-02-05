@@ -34,13 +34,12 @@
                     </tr>
                     <?php
                     $html="";
-                    $arr=count($vacationRequest);
-                    var_dump($arr);
-                    for ($i=0; $i<=$arr; $i++)
+                    var_dump($vacationRequest);
+                    foreach ($vacationRequest as $vacationRequests)
                     {
                         $html.="<tr>\n";
                         $html.="<th>";
-                        $html.="'".$_SESSION['user']->getId()."'";
+                        $html.=$vacationRequests['id'];
                         $html.="</th>\n";
                         $html.="<th></th>\n";
                         $html.="<th></th>\n";
