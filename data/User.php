@@ -3,12 +3,12 @@
 
 class User
 {
-    private int $id;
-    private string $login;
-    private string $fName;
-    private string $fmName;
-    private int $departementId;
-    private int $activeAccount;
+    public int $id;
+    public string $login;
+    public string $fName;
+    public string $fmName;
+    public int $departmentsId;
+    public int $activeAccount;
 
 
     /**
@@ -26,7 +26,7 @@ class User
         $this->login = $login;
         $this->fName = $fName;
         $this->fmName = $fmName;
-        $this->departementId = $departementId;
+        $this->departmentsId = $departementId;
         $this->activeAccount = $activeAccount;
     }
 
@@ -65,9 +65,9 @@ class User
     /**
      * @return int
      */
-    public function getDepartementId(): int
+    public function getDepartmentsId(): int
     {
-        return $this->departementId;
+        return $this->departmentsId;
     }
 
     /**

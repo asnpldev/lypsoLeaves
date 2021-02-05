@@ -24,7 +24,7 @@ function vacationControl_storeAction()
    // Code pour la route vacation et l'action store
    $datas['start']=$_POST['inputStartDate'];
    $datas['end']=$_POST['inputEndDate'];
-   $datas['user_id']=$_SESSION['user']['id'];
+  
 
    $test=vacation_storeAction($datas);
 

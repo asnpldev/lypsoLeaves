@@ -13,8 +13,8 @@ function dashboardControl($userAction){
 function dashboardControl_defaultAction()
 {
     $tabTitle="Tableau de bord";
-    var_dump($_SESSION['user']);
-    $vacations = user_findVacations($_SESSION['user']['id']);
+
+    //$vacations = user_findVacations($_SESSION['user']['id']);
     include('../page/dashboardPage_default.php');
 }
 

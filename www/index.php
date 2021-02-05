@@ -39,7 +39,7 @@ if (isset($_GET['action'])) {
 }
 
 
-if (!isset($_SESSION)){
+if (!isset($_SESSION['user'])){
     $route='authenticate';
 }
 
