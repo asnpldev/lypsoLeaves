@@ -12,7 +12,7 @@ function userData_findOneWithCredentials($userLogin, $userPwd){
 }
 
 function user_findVacations($userId){
-    $request="SELECT * FROM vacation WHERE user_id='".$_SESSION['user']->getId()."'";
+    $request="SELECT * FROM vacation WHERE user_id=$userId ";
     $requestParams=array($userId);
     return Connection::safeQuery($request,$requestParams);
 }

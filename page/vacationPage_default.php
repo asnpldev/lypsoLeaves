@@ -32,10 +32,22 @@
                         <th>Date de début de congé</th>
                         <th>Date de fin de congé1</th>
                     </tr>
-                    <tr>
-                        <th><?=  ?></th>
+                    <?php
+                    $html="";
+                    $arr=count($vacationRequest);
+                    var_dump($arr);
+                    for ($i=0; $i<=$arr; $i++)
+                    {
+                        $html.="<tr>\n";
+                        $html.="<th>"'"..'".</th>\n";
+                        $html.="<th></th>\n";
+                        $html.="<th></th>\n";
+                        $html.="</tr>";
+                    }
+                    echo $html
 
-                    </tr>
+                    ?>
+                </table>
             </div>
         </div>
     </div>
