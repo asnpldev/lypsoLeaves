@@ -38,6 +38,7 @@ function vacationControl_storeAction()
 
    // On appelle à nouveau la vue par défaut 
    $tabTitle="Demande de congé";
+   $vacationRequest=user_findVacations();
    include('../page/vacationPage_default.php');
 }
 
