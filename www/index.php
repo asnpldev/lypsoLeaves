@@ -14,6 +14,8 @@ include('../data/Connection.php');
 include('../data/userData.php');
 include('../data/vacationData.php');
 include('../data/managementData.php');
+include('../data/checkDayData.php');
+
 
 //CLASS
 include('../data/User.php');
@@ -24,6 +26,7 @@ include('../control/authenticateControl.php');
 include('../control/dashboardControl.php');
 include('../control/vacationControl.php');
 include('../control/managementControl.php');
+include('../control/agendaControl.php');
 session_start();
 
 $route='';
@@ -56,6 +59,9 @@ switch ($route){
     case 'vacation':
         vacationControl($action);
     break;
+    case 'agenda':
+        agendaControl($action);
+        break;
     case 'authenticate':
         authenticateControl($action);
     break;

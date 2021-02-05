@@ -33,10 +33,13 @@
                         <th>Date de fin de congé1</th>
                     </tr>
                     <tr>
-                        <th><?=  ?></th>
+                        <th></th>
 
                     </tr>
+                </table>
             </div>
         </div>
     </div>
 </div>
+
+<?php include('../page/template/footer.php'); ?>

@@ -7,46 +7,8 @@
         <div class="row">
             <div class="col-lg-6">
 
-                <!--        <table class="table table-bordered">-->
-                <!--            <thead>-->
-                <!--            <tr>-->
-                <!--                <th>NOM : Prénom</th>-->
-                <!--                <th>Departement</th>-->
-                <!--                <th>Début</th>-->
-                <!--                <th>Fin</th>-->
-                <!--                <th>Actions</th>-->
-                <!--            </tr>-->
-                <!--            </thead>-->
-                <!--            <tbody>-->
-                <!---->
-                <!--            --><?php
-                //
-                //            foreach ($actualRequests as $actualRequest){
-                //                ?>
-                <!--                <tr>-->
-                <!--                    <td></td>-->
-                <!---->
-                <!--                    <td></td>-->
-                <!--                    <td></td>-->
-                <!--                    <td></td>-->
-                <!---->
-                <!--                    <td><a class="btn bg-olive btn-xs">Accepter</a>-->
-                <!--                        &nbsp;-->
-                <!--                        <a class="btn bg-navy btn-xs">Annuler</a>-->
-                <!--                        &nbsp;-->
-                <!--                        <a class="btn bg-danger btn-xs">Annuler</a>-->
-                <!---->
-                <!--                    </td>-->
-                <!--                </tr>-->
-                <!--                --><?php
-                //            }
-                //            ?>
-                <!--            </tbody>-->
-                <!--        </table>-->
-
-
                 <br>
-                <?php foreach ($actualRequests as $actualRequest) {
+                <?php foreach ($actualRequests as $actualRequest) {;
                     ?>
                     <div class="post">
                         <div class="row">
@@ -81,8 +43,8 @@
                             </div>
                             <div class="col-md-3">
                         <span style="float: right">
-                        <a href="#" class="badge bg-olive">Valider</a>&nbsp;
-                        <a href="#" class="badge bg-navy">Supprimer</a>
+                        <a href="?route=management&action=accept&id=<?= $actualRequest['vacid'] ?>" class="badge bg-olive">Valider</a>&nbsp;
+                        <a href="?route=management&action=decline&id=<?= $actualRequest['vacid'] ?>" class="badge bg-navy">Supprimer</a>
                             </span>
                             </div>
                         </div>

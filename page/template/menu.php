@@ -29,3 +29,12 @@
         </p>
     </a>
 </li>
+
+<li class="nav-item has-treeview">
+    <a href="?route=agenda" class="nav-link">
+        <i class="nav-icon fas fa-calendar-week"></i>
+        <p>
+            Demande de congés
+        </p>
+    </a>
+</li>
