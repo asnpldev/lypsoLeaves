@@ -24,5 +24,19 @@
                 </div>
             </form>
         </div>
+        <div class="col-md-6">
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tr>
+                        <th>N° de la demande</th>
+                        <th>Date de début de congé</th>
+                        <th>Date de fin de congé1</th>
+                    </tr>
+                    <tr>
+                        <th><?=  ?></th>
+
+                    </tr>
+            </div>
+        </div>
     </div>
 </div>
