@@ -34,19 +34,15 @@
                     </tr>
                     <?php
                     $html="";
-                    var_dump($vacationRequest);
                     foreach ($vacationRequest as $vacationRequests)
                     {
                         $html.="<tr>\n";
-                        $html.="<th>";
-                        $html.=$vacationRequests['id'];
-                        $html.="</th>\n";
-                        $html.="<th></th>\n";
-                        $html.="<th></th>\n";
+                        $html.="<th>".$vacationRequests['id']."</th>";
+                        $html.="<th>".$vacationRequests['start']."</th>";
+                        $html.="<th>".$vacationRequests['end']."</th>";
                         $html.="</tr>";
                     }
                     echo $html
-
                     ?>
                 </table>
             </div>
