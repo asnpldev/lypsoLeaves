@@ -32,14 +32,20 @@
                         <th>Date de début de congé</th>
                         <th>Date de fin de congé1</th>
                     </tr>
-                    <tr>
-                        <th></th>
-
-                    </tr>
+                    <?php
+                    $html="";
+                    foreach ($vacationRequest as $vacationRequests)
+                    {
+                        $html.="<tr>\n";
+                        $html.="<th>".$vacationRequests['id']."</th>";
+                        $html.="<th>".$vacationRequests['start']."</th>";
+                        $html.="<th>".$vacationRequests['end']."</th>";
+                        $html.="</tr>";
+                    }
+                    echo $html
+                    ?>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
-<?php include('../page/template/footer.php'); ?>

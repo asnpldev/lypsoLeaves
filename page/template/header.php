@@ -55,7 +55,7 @@
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
                     <a href="#"
-                       class="d-block"><?=  $_SESSION['user']->getFName() . ' ' . $_SESSION['user']->getLogin() ?> </a>
+                       class="d-block"><?=  $_SESSION['user']->getFName() . ' ' . $_SESSION['user']->getFmName() ?> </a>
 
                 </div>
 

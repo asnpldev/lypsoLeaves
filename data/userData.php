@@ -11,8 +11,7 @@ function userData_findOneWithCredentials($userLogin, $userPwd){
      }
 }
 
-function user_findVacations($userId){
+function user_findVacations(){
     $request="SELECT * FROM vacation WHERE user_id='".$_SESSION['user']->getId()."'";
-    $requestParams=array($userId);
-    return Connection::safeQuery($request,$requestParams);
+    return Connection::query($request);
 }
