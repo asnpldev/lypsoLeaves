@@ -39,7 +39,9 @@
                     for ($i=0; $i<=$arr; $i++)
                     {
                         $html.="<tr>\n";
-                        $html.="<th>"'"..'".</th>\n";
+                        $html.="<th>";
+                        $html.="'".$_SESSION['user']->getId()."'";
+                        $html.="</th>\n";
                         $html.="<th></th>\n";
                         $html.="<th></th>\n";
                         $html.="</tr>";
