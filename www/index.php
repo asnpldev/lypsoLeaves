@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 //error_reporting(E_ALL);
 //ini_set('display_errors',true);
 //ini_set('display_startup_errors',true);
@@ -15,15 +15,16 @@ include('../data/userData.php');
 include('../data/vacationData.php');
 include('../data/managementData.php');
 
+//CLASS
+include('../data/User.php');
+
 
 //CONTROLLERS
 include('../control/authenticateControl.php');
 include('../control/dashboardControl.php');
 include('../control/vacationControl.php');
 include('../control/managementControl.php');
-
-/*include ('../page/fct_date.php');
-include ('../page/fct_vacation.php');*/
+session_start();
 
 $route='';
 
@@ -38,7 +39,7 @@ if (isset($_GET['action'])) {
 }
 
 
-if (!isset($_SESSION['user'])){
+if (!isset($_SESSION)){
     $route='authenticate';
 }
 

@@ -41,8 +41,12 @@ function authenticateControl_loginAction($login,$password)
         // Code s'il lutilisateur existe dans la table user
         if ($user['active']){
             // L'utilisateur a le droit d'accès
-            $_SESSION['user']=$user;
+
+            $_SESSION = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], $user['active']);
+
+            //$_SESSION['user']=$user;
             header('location:./?route=dashboard');
+
         }
         else{
             // On informe l'utilisateur qu'il n'a pas le droit d'accès

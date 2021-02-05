@@ -1,7 +1,6 @@
 <?php
 
 function userData_findOneWithCredentials($userLogin, $userPwd){
-     //$request="SELECT * FROM user WHERE email='".$userMail."' AND mdp='".$userPwd."'";
      $request="SELECT id,login,firstname,lastname,department_id,active FROM user WHERE login=? AND password=?";
      $requestParams=array($userLogin,sha1($userPwd));
      $result=Connection::safeQuery($request,$requestParams);
