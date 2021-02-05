@@ -54,7 +54,18 @@
                 }
                 ?>
             </div>
-
+            <div class="col-lg-6">
+                <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>Responsable</th>
+                            <th>Nom/Prénom</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
 
 
