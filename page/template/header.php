@@ -6,92 +6,56 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?= ENV['APP_NAME'] ?> &mdash; <?= $tabTitle ?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../page/css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>body {
+            font-family: 'Inter';
+        }</style>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- overlayScrollbars -->
 
-    <link rel="stylesheet" href="./dist/css/adminlte.min.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-dark navbar-dark">
-        <!-- Left navbar links -->
+<body>
+<nav class="bg-gray-900">
+    <div class="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                     <span
+                             class="text-gray-500 font-regular px-2 inline-flex text-sm leading-5 rounded-md mr-5">Connecté(e) en tant que :  <?= $_SESSION['user']->getFmName() . ' ' . $_SESSION['user']->getFName() ?></span>
 
-        <ul class="navbar-nav">
-
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            class="fas fa-bars"></i></a>
-            </li>
-
-
-
-        </ul>
-        <a href="?route=authenticate&action=logout" class="btn btn-danger btn-xs">Déconnexion</a>
-
-
-    </nav>
-    <!-- /.navbar -->
-
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-navy elevation-4">
-        <!-- Brand Logo -->
-        <a href="/" class="brand-link">
-            <span class="brand-text font-weight-light"></span>
-        </a>
-
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Sidebar user (optional) -->
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="info">
-                    <a href="#"
-                       class="d-block"><?=  $_SESSION['user']->getFName() . ' ' . $_SESSION['user']->getFmName() ?> </a>
 
                 </div>
 
             </div>
+            <div class="hidden md:block">
+                <div class="ml-4 flex items-center md:ml-6">
+
+                    <a href="?route=authenticate&action=logout"
+                       class="text-gray-100 font-bold bg-gray-900 px-2 inline-flex text-xs leading-5 rounded-md mr-1">Deconnexion</a>
 
 
-            <!-- Sidebar Menu -->
-            <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                    data-accordion="false">
-                    <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
-                    <?php include('../page/template/menu.php'); ?>
+                    <div class="ml-3 relative">
+                        <div>
+                            <button class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                    id="user-menu" aria-haspopup="true">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-8 w-8 rounded-full"
+                                     src="../page/img/boy.svg">
+                            </button>
+                        </div>
 
-                </ul>
-            </nav>
-            <!-- /.sidebar-menu -->
-        </div>
-        <!-- /.sidebar -->
-    </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-12">
-                        <h1><?= $tabTitle ?></h1>
                     </div>
                 </div>
-            </div><!-- /.container-fluid -->
-        </section>
+            </div>
 
-        <!-- Main content -->
-        <section class="content">
+        </div>
+    </div>
 
-            <!-- Default box -->
-            <div class="card">
+</nav>
+
+
+<?php include('../page/template/menu.php'); ?>
+
+

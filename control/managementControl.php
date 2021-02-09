@@ -4,21 +4,30 @@
 function managementControl($userAction)
 {
     switch ($userAction) {
-        // case à ajouter pour chaque nouvelle action souhaitée
         case 'accept':
             $tempId = $_GET['id'];
             managementData_AcceptRequest($tempId);
-            managementControl_defaultAction();
+            managementControl_MessageAction(1, "Succès!");
             break;
         case 'decline';
             $tempId = $_GET['id'];
             managementData_DeclineRequest($tempId);
-            managementControl_defaultAction();
+            managementControl_MessageAction(1, "Succès!");
             break;
         default:
             managementControl_defaultAction();
             break;
     }
+}
+
+
+function managementControl_MessageAction(int $id, string $content)
+{
+    $tabTitle = "Management";
+    $type=$id;
+    $message=$content;
+    $actualRequests = managementRequests_getAll();
+    include('../page/managementPage_default.php');
 }
 
 

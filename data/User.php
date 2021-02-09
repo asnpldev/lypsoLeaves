@@ -9,6 +9,7 @@ class User
     public string $fmName;
     public int $departmentsId;
     public int $activeAccount;
+    public string $sx;
 
 
     /**
@@ -19,8 +20,9 @@ class User
      * @param string $fmName
      * @param int $departementId
      * @param int $activeAccount
+     * @param string $sx
      */
-    public function __construct(int $id, string $login, string $fName, string $fmName, int $departementId, int $activeAccount)
+    public function __construct(int $id, string $login, string $fName, string $fmName, int $departementId, int $activeAccount, string $sx)
     {
         $this->id = $id;
         $this->login = $login;
@@ -28,6 +30,15 @@ class User
         $this->fmName = $fmName;
         $this->departmentsId = $departementId;
         $this->activeAccount = $activeAccount;
+        $this->sx = $sx;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSx(): string
+    {
+        return $this->sx;
     }
 
     /**

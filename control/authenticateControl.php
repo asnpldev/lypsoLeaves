@@ -42,7 +42,7 @@ function authenticateControl_loginAction($login,$password)
         if ($user['active']){
             // L'utilisateur a le droit d'accès
 
-            $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], $user['active']);
+            $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], $user['active'], $user['sx']);
             //$_SESSION['user']=$user;
             header('location:./?route=dashboard');
         }
