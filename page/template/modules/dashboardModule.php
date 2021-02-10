@@ -6,7 +6,7 @@
         <p class="mt-1 max-w-2xl text-sm font-regular text-gray-500">
 
 
-            <a href="#" class="text-red-600 bg-red-200 px-2 inline-flex text-xs leading-5 rounded-full">Aucun module disponible</a>
+            <a href="#" class="text-red-600 bg-red-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">Aucun module disponible</a>
 
         </p>
     </div>

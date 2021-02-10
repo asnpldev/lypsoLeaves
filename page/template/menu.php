@@ -49,6 +49,10 @@ $temp = $_GET['route'];
                     case 'dashboard':
                         include('modules/dashboardModule.php');
                         break;
+                    case 'vacation':
+                        include('modules/vacationModule.php');
+                        break;
+
 
                     default:
                         include('modules/defaultModule.php');
