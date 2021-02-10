@@ -39,12 +39,14 @@ function vacationControl_storeAction()
 
    if ($test>0){
        $message="Votre demande de congé à été envoyée avec succès.";
+       $type=0;
    }
    else {
-       $message="Il y a un problème dans la demande de congé ou bien nous avons perdu la connexion !!";
+       $message="Il y a un problème dans la demande de congé, veuillez vérifier quelle soit bien valide !";
+       $type=1;
    }
 
-   // On appelle à nouveau la vue par défaut 
+   // On appelle à nouveau la vue par défaut
    $tabTitle="Demande de congés";
    $vacationRequest=user_findVacations();
    include('../page/vacationPage_default.php');

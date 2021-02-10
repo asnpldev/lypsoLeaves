@@ -38,7 +38,23 @@
                 </p>
             </div>
         </div>
+
+
+
         <div class="mt-10 sm:mt-0 bg-gray-50">
+
+            <?php if(isset($message)){
+                if($type == 0){?>
+                    <div class="bg-green-200 mx-6 w-1/2 border-l-4 p-2.5 rounded border-green-600 ">
+                        <span class="text-green-600 "><i class="fas fa-check-circle mr-3 text-green-600"></i> <?= $message ?></span>
+
+                    </div><?php } else if($type == 1){?>
+                    <div class="bg-red-200 mx-6 w-1/2 border-l-4 p-2.5 rounded border-red-600 ">
+                        <span class="text-red-600 "><i class="fas fa-exclamation-triangle mr-3 text-red-600"></i> <?= $message ?></span>
+
+                    </div>
+
+                <?php }}?>
 
 
             <div class="mt-5 md:mt-0 md:col-span-2">

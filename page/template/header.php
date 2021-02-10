@@ -4,6 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="https://www.flaticon.com/svg/vstatic/svg/4178/4178547.svg?token=exp=1612972207~hmac=8ca38268c9ba9341b77406460c7daa22"/>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?= ENV['APP_NAME'] ?> &mdash; <?= $tabTitle ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
