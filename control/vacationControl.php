@@ -6,12 +6,21 @@ function vacationControl($userAction){
         case 'store':
             vacationControl_storeAction();
             break;
+        case 'requests':
+            vacationControl_requestAction();
+            break;
         default:
             vacationControl_defaultAction();
         break;
     }
 }
 
+function vacationControl_requestAction()
+{
+    $tabTitle="Vos demandes en attente";
+    $vacationRequest=user_findVacations();
+    include('../page/vacationPage_requests.php');
+}
 
 function vacationControl_defaultAction()
 {
