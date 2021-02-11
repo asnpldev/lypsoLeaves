@@ -12,7 +12,7 @@ function MaintenanceControl($userAction){
 
 function MaintenanceControl_defaultAction()
 {
-    $tabTitle="mtnc";
+    $tabTitle="Maintenance";
 
 
     include('../page/MaintenancePage_default.php');

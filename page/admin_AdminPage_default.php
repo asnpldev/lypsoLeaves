@@ -30,7 +30,36 @@
         </div>
     </div>
 
-    ADMIN page
+    <div class="grid grid-cols-12 gap-5 m-2">
 
+        <div class="col-span-3">
+
+            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-blue-900">
+
+                <span class="text-5xl">5</span><br>
+                <small>Utilisateurs</small>
+            </div>
+
+        </div><div class="col-span-3">
+
+            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-blue-900">
+
+                <span class="text-5xl">5</span><br>
+                <small>Demandes en attente</small>
+            </div>
+
+        </div><div class="col-span-6">
+
+            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-blue-900">
+
+                <span class="text-5xl">5</span><br>
+                <small>??</small>
+            </div>
+
+        </div>
+
+
+
+    </div>
 
 <?php include('template/footer.php')?>
