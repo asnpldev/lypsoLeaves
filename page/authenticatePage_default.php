@@ -25,8 +25,7 @@ if ($message != '') {
 <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
         <div>
-            <img class="mx-auto h-24 w-auto" src="https://www.flaticon.com/svg/vstatic/svg/4151/4151622.svg?token=exp=1612896026~hmac=0e1132cf540b614a25073f46b6ece106"
-                 alt="Workflow">
+            <img class="mx-auto h-24 w-auto" src="../page/img/password.png">
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                 Connexion au pannel
             </h2>
