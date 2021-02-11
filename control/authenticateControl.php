@@ -42,9 +42,20 @@ function authenticateControl_loginAction($login,$password)
         if ($user['active']){
             // L'utilisateur a le droit d'accès
 
+
+
+
+
             $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], $user['active'], $user['sx'], $user['admin']);
+
+            $query = @unserialize (file_get_contents('http://ip-api.com/php/'));
+            if ($query && $query['status'] == 'success') {
+                saveIPIntoDB($query['query'],$query['city'], $query['regionName'], $query['country'] );
+            }
+
             //$_SESSION['user']=$user;
             header('location:./?route=dashboard');
+
         }
         else{
             // On informe l'utilisateur qu'il n'a pas le droit d'accès

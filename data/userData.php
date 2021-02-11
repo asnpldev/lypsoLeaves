@@ -11,6 +11,28 @@ function userData_findOneWithCredentials($userLogin, $userPwd){
      }
 }
 
+
+
+function loadConnexionHistory(){
+
+    $request="SELECT * FROM logip WHERE user_id='".$_SESSION['user']->getId()."' ORDER BY log_date DESC";
+    return Connection::query($request);
+
+
+}
+
+
+function saveIPIntoDB($i_ip, $city, $region, $country){
+
+
+    $request="INSERT INTO logip VALUES(NULL, '".$_SESSION['user']->getId()."', '".$i_ip."', '".$city."', '".$region."', '".$country."', NOW())";
+    $results=Connection::exec($request);
+    return $results;
+
+
+}
+
+
 //DEMANDES EN COURS (qui sont en attente donc status==0)
 function user_findVacations(){
     $request="SELECT * FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE user_id='".$_SESSION['user']->getId()."' AND status=0";

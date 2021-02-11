@@ -70,8 +70,7 @@
 
 
     </div>
-
-    <hr class="border-gray-200 w-full m-2 mt-5">
+    <hr class="border-gray-200 m-2 mt-5">
 
 
 <?php include('template/footer.php') ?>

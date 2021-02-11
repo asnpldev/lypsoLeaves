@@ -14,6 +14,7 @@ function dashboardControl_defaultAction()
 {
     $tabTitle="Tableau de bord";
 
+    $iplogger=loadConnexionHistory();
     //$vacations = user_findVacations($_SESSION['user']['id']);
     include('../page/dashboardPage_default.php');
 }

@@ -3,52 +3,49 @@
 
     <div class="p-2">
 
-        <!-- ERREUR DE CHARGEMENT -->
-        <!-- ERREUR DE CHARGEMENT -->
-        <!-- ERREUR DE CHARGEMENT -->
-        <!-- ERREUR DE CHARGEMENT -->
 
-        <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
-            <div class="pr-2">
-                <i class="fas fa-exclamation-circle text-red-600"></i>
+<!--        --><?php //function generateRandomString($length = 5) {
+//        $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+//        $charactersLength = strlen($characters);
+//        $randomString = '';
+//        for ($i = 0; $i < $length; $i++) {
+//        $randomString .= $characters[rand(0, $charactersLength - 1)];
+//        }
+//        return $randomString;
+//        }
+//
+//        echo generateRandomString();
+//
+//        ?>
+
+        <?php
+
+        foreach($iplogger as $log){?>
+
+
+
+
+
+        <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10">
+
+
+                <span class="bg-blue-700 px-1 py-0.5 text-white text-xs rounded uppercase float-left mt-2.5 mr-1.5 h-7 w-7  text-center"></span>
             </div>
-            <div>
-                <div class="text-sm pb-2 pt-0.5 text-red-600 font-bold">
-                    &mdash; Erreur de connexion à la page (IP: <?php if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-                        $ip = $_SERVER['HTTP_CLIENT_IP'];
-                    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-                        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-                    } else {
-                        $ip = $_SERVER['REMOTE_ADDR'];
-                    }
-
-                    echo $ip;
-                    ?>)
-                    <span class="float-right " onclick="closeNotif();"><i class="fas fa-times cursor-pointer"></i> </span>
+            <div class="ml-1">
+                <div class="text-sm font-medium text-gray-900">
+                    <?= $_SESSION['user']->getLogin(); ?>
                 </div>
-                <div class="text-sm text-gray-600 w-96 tracking-tight ">
-                    Page actuellement indisponible !
+                <div class="text-sm text-gray-500">
+                    <span class="text-blue-500"><?= $log['ip']?></span>
+                    &mdash; <?= $log['city']?>, <?= $log['region']?>, <?= $log['country']?> | <?= date('d/m/Y \à H:i:s', strtotime($log['log_date'])); ?>
                 </div>
             </div>
         </div>
-        <!-- ERREUR DE CHARGEMENT -->
-        <!-- ERREUR DE CHARGEMENT -->
-        <!-- ERREUR DE CHARGEMENT -->
-        <!-- ERREUR DE CHARGEMENT -->
 
-        <?php function generateRandomString($length = 5) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        return $randomString;
-        }
+           <?php }
 
-        echo generateRandomString();
-
-        ?>
+            ?>
 
 
 
