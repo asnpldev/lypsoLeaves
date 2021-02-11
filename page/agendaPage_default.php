@@ -4,7 +4,7 @@
         <?php $today = getdate();
 
 
-        echo "Nous somme le " .checkday($today) . " 5";
+        echo "Nous sommes le " .checkday($today) . ' '. date('d M', );
 
         ?>
 

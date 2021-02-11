@@ -27,47 +27,57 @@ include('../control/dashboardControl.php');
 include('../control/vacationControl.php');
 include('../control/managementControl.php');
 include('../control/agendaControl.php');
+include('../control/404Control.php');
+include('../control/adminControl.php');
+include('../control/maintenanceControl.php');
+
 session_start();
 
-$route='';
+$route = '';
 
 if (isset($_GET['route'])) {
-    $route=$_GET['route'];
+    $route = $_GET['route'];
 }
 
-$action='';
+$action = '';
 
 if (isset($_GET['action'])) {
-    $action=$_GET['action'];
+    $action = $_GET['action'];
 }
 
 
-if (!isset($_SESSION['user'])){
-    $route='authenticate';
+if (!isset($_SESSION['user'])) {
+    $route = 'authenticate';
 }
 
-switch ($route){
+switch ($route) {
     case 'dashboard':
         dashboardControl($action);
-    break;
+        break;
     case 'management':
         managementControl($action);
-    break;
+        break;
     case 'user':
 //        userControl($action);
-    break;
+        break;
     case 'vacation':
         vacationControl($action);
-    break;
+        break;
     case 'agenda':
         agendaControl($action);
         break;
     case 'authenticate':
         authenticateControl($action);
-    break;
-    default :
-        echo "<p>La route spécifiée n'existe pas !</p>";
-    break;
+        break;
+    case 'maintenance':
+        maintenanceControl($action);
+        break;
+    case 'admin':
+        adminControl($action);
+        break;
+    default:
+        ErrorExpControl($action);
+        break;
 }
 
 

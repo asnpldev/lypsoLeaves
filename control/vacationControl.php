@@ -1,8 +1,9 @@
 <?php
 
-function vacationControl($userAction){
-    switch ($userAction){
-        // case à ajouter pour chaque nouvelle action souhaitée
+function vacationControl($userAction)
+{
+    switch ($userAction) {
+
         case 'store':
             vacationControl_storeAction();
             break;
@@ -11,45 +12,44 @@ function vacationControl($userAction){
             break;
         default:
             vacationControl_defaultAction();
-        break;
+            break;
     }
 }
 
 function vacationControl_requestAction()
 {
-    $tabTitle="Vos demandes en attente";
-    $vacationRequest=user_findVacations();
+    $tabTitle = "Vos demandes en attente";
+    $vacationRequest = user_findVacations();
     include('../page/vacationPage_requests.php');
 }
 
 function vacationControl_defaultAction()
 {
-    $tabTitle="Demande de congés";
-    $vacationRequest=user_findVacations();
+    $tabTitle = "Demande de congés";
+    $vacationRequest = user_findVacations();
     include('../page/vacationPage_default.php');
 }
 
 function vacationControl_storeAction()
 {
-   // Code pour la route vacation et l'action store
-   $datas['start']=$_POST['inputStartDate'];
-   $datas['end']=$_POST['inputEndDate'];
 
-   $test=vacation_storeAction($datas);
+    $datas['start'] = $_POST['inputStartDate'];
+    $datas['end'] = $_POST['inputEndDate'];
 
-   if ($test>0){
-       $message="Votre demande de congé à été envoyée avec succès.";
-       $type=0;
-   }
-   else {
-       $message="Il y a un problème dans la demande de congé, veuillez vérifier quelle soit bien valide !";
-       $type=1;
-   }
+    $dbExec = vacation_storeAction($datas);
 
-   // On appelle à nouveau la vue par défaut
-   $tabTitle="Demande de congés";
-   $vacationRequest=user_findVacations();
-   include('../page/vacationPage_default.php');
+    if ($dbExec > 0) {
+        $message = "Votre demande de  congé à été envoyée avec succès.";
+        $type = 0;
+    } else {
+        $message = "Il y a un problème dans la demande de congé, veuillez vérifier quelle soit bien valide !";
+        $type = 1;
+    }
+
+
+    $tabTitle = "Demande de congés";
+    $vacationRequest = user_findVacations();
+    include('../page/vacationPage_default.php');
 }
 
 

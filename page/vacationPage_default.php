@@ -19,13 +19,15 @@
                         <li class="flex items-center">
                             <a href="?route=dashboard">Tableau de bord</a>
 
-                            <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 320 512">
                                 <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
                             </svg>
                         </li>
                         <li class="flex items-center">
                             <a href="?route=management">Demande de congés</a>
-                            <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 320 512">
                                 <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
                             </svg>
                         </li>
@@ -40,21 +42,24 @@
         </div>
 
 
-
         <div class="mt-10 sm:mt-0 bg-gray-50">
 
-            <?php if(isset($message)){
-                if($type == 0){?>
+            <?php if (isset($message)) {
+                if ($type == 0) {
+                    ?>
                     <div class="bg-green-200 mx-6 w-1/2 border-l-4 p-2.5 rounded border-green-600 ">
-                        <span class="text-green-600 "><i class="fas fa-check-circle mr-3 text-green-600"></i> <?= $message ?></span>
+                    <span class="text-green-600 "><i
+                                class="fas fa-check-circle mr-3 text-green-600"></i> <?= $message ?></span>
 
-                    </div><?php } else if($type == 1){?>
+                    </div><?php } else if ($type == 1) { ?>
                     <div class="bg-red-200 mx-6 w-1/2 border-l-4 p-2.5 rounded border-red-600 ">
-                        <span class="text-red-600 "><i class="fas fa-exclamation-triangle mr-3 text-red-600"></i> <?= $message ?></span>
+                        <span class="text-red-600 "><i
+                                    class="fas fa-exclamation-triangle mr-3 text-red-600"></i> <?= $message ?></span>
 
                     </div>
 
-                <?php }}?>
+                <?php }
+            } ?>
 
 
             <div class="mt-5 md:mt-0 md:col-span-2">
@@ -92,7 +97,6 @@
 
 
     </div>
-
 
 
 </div>
