@@ -12,7 +12,7 @@ function adminControl($userAction){
 
 function adminControl_defaultAction()
 {
-    $tabTitle="Admin";
+    $tabTitle="Administration";
 
 
     include('../page/admin_AdminPage_default.php');

@@ -73,7 +73,9 @@ $temp = $_GET['route'];
                     case 'vacation':
                         include('modules/vacationModule.php');
                         break;
-
+                    case 'admin':
+                        include('modules/adminModule.php');
+                        break;
 
                     default:
                         include('modules/defaultModule.php');
