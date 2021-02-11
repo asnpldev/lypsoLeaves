@@ -47,15 +47,35 @@
             <?php if (isset($message)) {
                 if ($type == 0) {
                     ?>
-                    <div class="bg-green-200 mx-6 w-1/2 border-l-4 p-2.5 rounded border-green-600 ">
-                    <span class="text-green-600 "><i
-                                class="fas fa-check-circle mr-3 text-green-600"></i> <?= $message ?></span>
+            <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
+                <div class="pr-2">
+                    <i class="fas fa-check-circle text-green-600"></i>
+                </div>
+                <div>
+                    <div class="text-sm pb-2 pt-0.5 text-green-600 font-bold">
+                        &mdash; Succès
+                        <span class="float-right " onclick="closeNotif();"><i class="fas fa-times cursor-pointer"></i> </span>
+                    </div>
+                    <div class="text-sm text-gray-600 w-96 tracking-tight ">
+                        <?= $message ?>
+                    </div>
+                </div>
+            </div>
 
-                    </div><?php } else if ($type == 1) { ?>
-                    <div class="bg-red-200 mx-6 w-1/2 border-l-4 p-2.5 rounded border-red-600 ">
-                        <span class="text-red-600 "><i
-                                    class="fas fa-exclamation-triangle mr-3 text-red-600"></i> <?= $message ?></span>
-
+                   <?php } else if ($type == 1) { ?>
+                    <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
+                        <div class="pr-2">
+                            <i class="fas fa-exclamation-circle text-red-600"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm pb-2 pt-0.5 text-red-600 font-bold">
+                                &mdash; Erreur
+                                <span class="float-right " onclick="closeNotif();"><i class="fas fa-times cursor-pointer"></i> </span>
+                            </div>
+                            <div class="text-sm text-gray-600 w-96 tracking-tight ">
+                                <?= $message ?>
+                            </div>
+                        </div>
                     </div>
 
                 <?php }
@@ -102,3 +122,4 @@
 </div>
 
 
+<?php include('template/footer.php');

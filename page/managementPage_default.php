@@ -34,7 +34,47 @@
             </p>
         </div>
     </div>
-    <div class="flex flex-col">
+
+<?php if (isset($message)) {
+    if ($type == 0) {
+        ?>
+        <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
+            <div class="pr-2">
+                <i class="fas fa-check-circle text-indigo-600"></i>
+            </div>
+            <div>
+                <div class="text-sm pb-2 pt-0.5 text-indigo-600 font-bold">
+                    &mdash; Succès
+                    <span class="float-right " onclick="closeNotif();"><i class="fas fa-times cursor-pointer"></i> </span>
+                </div>
+                <div class="text-sm text-gray-600 w-96 tracking-tight ">
+                    <?= $message ?>
+                </div>
+            </div>
+        </div>
+
+    <?php } else if ($type == 1) { ?>
+        <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
+            <div class="pr-2">
+                <i class="fas fa-exclamation-circle text-red-600"></i>
+            </div>
+            <div>
+                <div class="text-sm pb-2 pt-0.5 text-red-600 font-bold">
+                    &mdash; Erreur
+                    <span class="float-right " onclick="closeNotif();"><i class="fas fa-times cursor-pointer"></i> </span>
+                </div>
+                <div class="text-sm text-gray-600 w-96 tracking-tight ">
+                    <?= $message ?>
+                </div>
+            </div>
+        </div>
+
+    <?php }
+} ?>
+
+
+<div class="overflow-y-auto" style="max-height: 750px;">
+    <div class="flex flex-col ">
         <div class="overflow-x-auto">
             <div class="align-middle inline-block min-w-full">
                 <div class="overflow-hidden border-b border-t border-gray-200 ">
@@ -64,7 +104,8 @@
 
                         </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
+                        <tbody class="bg-white divide-y divide-gray-200 ">
+
                         <?php if (empty($actualRequests)) { ?>
 
 
@@ -112,7 +153,7 @@
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm text-gray-900">Demande de congés</div>
+                                        <div class="text-sm text-gray-900">Demande de congés #<?= $actualRequest['vacid']?></div>
                                         <div class="text-sm text-gray-500">
                                             Du <?php echo date('d/m/y', strtotime($actualRequest['start']))
                                             ?>
@@ -142,13 +183,14 @@
                         }
                         ?>
 
+
                         <!-- More items... -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    </div>
+    </div></div>
 
 
 <?php include('../page/template/footer.php'); ?>

@@ -14,7 +14,9 @@ function adminControl_defaultAction()
 {
     $tabTitle="Administration";
 
-
+    $treatmentCount = treatmentWaitingRowCount();
+    $allTreatmentsCount = treatmentAllRowCount();
+    $userCount = userRowCount();
     include('../page/admin_AdminPage_default.php');
 }
 

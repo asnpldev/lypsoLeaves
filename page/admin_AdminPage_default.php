@@ -1,4 +1,4 @@
-<?php include('template/header.php')?>
+<?php include('template/header.php') ?>
 
 
     <div class="bg-gray-50">
@@ -24,6 +24,8 @@
                         <span class="text-gray-500" aria-current="page">Dashboard</span>
                     </li>
                 </ol>
+
+
             </nav>
             </small>
             </p>
@@ -34,32 +36,33 @@
 
         <div class="col-span-3">
 
-            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-blue-900">
+            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
 
-                <span class="text-5xl">5</span><br>
+                <span class="text-5xl"><?= $userCount['count']?> </span><br>
                 <small>Utilisateurs</small>
             </div>
 
-        </div><div class="col-span-3">
+        </div>
+        <div class="col-span-3">
 
-            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-blue-900">
+            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
 
-                <span class="text-5xl">5</span><br>
+                <span class="text-5xl"><?= $treatmentCount['count'] ?></span><br>
                 <small>Demandes en attente</small>
             </div>
 
-        </div><div class="col-span-6">
+        </div>
+        <div class="col-span-6">
 
-            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-blue-900">
+            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
 
-                <span class="text-5xl">5</span><br>
-                <small>??</small>
+                <span class="text-5xl"><?= $allTreatmentsCount['count'] ?></span><br>
+                <small>Demandes au total</small>
             </div>
 
         </div>
 
 
-
     </div>
 
-<?php include('template/footer.php')?>
+<?php include('template/footer.php') ?>

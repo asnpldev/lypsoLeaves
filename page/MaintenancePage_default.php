@@ -1,4 +1,4 @@
-<?php include('template/header.php')?>
+<?php include('template/header.php') ?>
 
 
     <div class="bg-gray-50">
@@ -31,7 +31,13 @@
     </div>
 
 
-    maintenance
+    <div class="p-2">
+
+        <
 
 
-<?php include('template/footer.php')?>
+    </div>
+
+
+
+<?php include('template/footer.php') ?>

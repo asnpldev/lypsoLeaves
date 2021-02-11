@@ -9,7 +9,7 @@ $temp = $_GET['route'];
         <div class="grid grid-cols-12">
 
 
-            <div class="col-span-6 bg-gray-800 h-screen p-3">
+            <div class="col-span-6 bg-gray-800 p-3 h-screen">
 
 
                 <div class="w-full text-left m-4 transition duration-200 ease-in-out transform hover:translate-x-2">

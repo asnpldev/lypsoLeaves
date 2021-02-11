@@ -7,12 +7,12 @@ function managementControl($userAction)
         case 'accept':
             $tempId = $_GET['id'];
             managementData_AcceptRequest($tempId);
-            managementControl_MessageAction(1, "Succès!");
+            managementControl_MessageAction(0, "La demande #".$tempId." à bien été accepté !");
             break;
         case 'decline';
             $tempId = $_GET['id'];
             managementData_DeclineRequest($tempId);
-            managementControl_MessageAction(1, "Succès!");
+            managementControl_MessageAction(0, "La demande #".$tempId." à bien été refusée!");
             break;
         default:
             managementControl_defaultAction();

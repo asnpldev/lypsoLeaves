@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="../page/css/styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <style>body {font-family: 'Inter';}
-        ::-webkit-scrollbar {width: 10px;}
+       /* ::-webkit-scrollbar {width: 10px;}
         ::-webkit-scrollbar-track {background: #f1f1f1;}
         ::-webkit-scrollbar-thumb {background: #1F2937;}
-        ::-webkit-scrollbar-thumb:hover {background: #1D4ED8;}</style>
+        ::-webkit-scrollbar-thumb:hover {background: #1D4ED8;}*/</style>
 
 
 </head>
 <body>
+
 <nav class="bg-gray-900">
     <div class="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
