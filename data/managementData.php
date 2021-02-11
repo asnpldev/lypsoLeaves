@@ -3,7 +3,7 @@
 
 
 function managementRequests_getAll(){
-    $request="SELECT *, vacation.id AS 'vacid' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE vacation.status=0 ORDER BY vacation.start ASC";
+    $request="SELECT *, vacation.id AS 'vacid' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE vacation.status=0 ORDER BY vacation.id DESC";
     return Connection::query($request);
 }
 

@@ -5,19 +5,37 @@ function managementControl($userAction)
 {
     switch ($userAction) {
         case 'accept':
-            $tempId = $_GET['id'];
-            managementData_AcceptRequest($tempId);
-            managementControl_MessageAction(0, "La demande #".$tempId." à bien été accepté !", $tempId);
+            if (isset($_GET['id'])) {
+                $tempId = $_GET['id'];
+                managementData_AcceptRequest($tempId);
+                managementControl_MessageAction(0, "La demande #" . $tempId . " à bien été accepté !", $tempId);
+            } else {
+
+                managementControl_defaultAction();
+
+            }
             break;
         case 'decline';
-            $tempId = $_GET['id'];
-            managementData_DeclineRequest($tempId);
-            managementControl_MessageAction(0, "La demande #".$tempId." à bien été refusée!", $tempId);
+            if (isset($_GET['id'])) {
+                $tempId = $_GET['id'];
+                managementData_DeclineRequest($tempId);
+                managementControl_MessageAction(0, "La demande #" . $tempId . " à bien été refusée!", $tempId);
+            } else {
+
+                managementControl_defaultAction();
+
+            }
             break;
         case 'cancel';
-            $tempId = $_GET['id'];
-            managementData_CancelRequest($tempId);
-            managementControl_MessageAction(1, "La demande #".$tempId." à été placée en attente !", $tempId);
+            if (isset($_GET['id'])) {
+                $tempId = $_GET['id'];
+                managementData_CancelRequest($tempId);
+                managementControl_MessageAction(1, "La demande #" . $tempId . " à été placée en attente !", $tempId);
+            } else {
+
+                managementControl_defaultAction();
+
+            }
             break;
         default:
             managementControl_defaultAction();
@@ -29,9 +47,9 @@ function managementControl($userAction)
 function managementControl_MessageAction(int $id, string $content, int $tempId)
 {
     $tabTitle = "Management";
-    $type=$id;
-    $message=$content;
-    $cancelId=$tempId;
+    $type = $id;
+    $message = $content;
+    $cancelId = $tempId;
     $actualRequests = managementRequests_getAll();
     include('../page/managementPage_default.php');
 }

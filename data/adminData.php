@@ -21,3 +21,11 @@ function treatmentAllRowCount()
     $request = "SELECT COUNT(*) AS 'count' FROM vacation";
     return Connection::query($request)[0];
 }
+
+
+function setResetAll()
+{
+
+    $request = "UPDATE vacation SET status=0 ";
+    return Connection::exec($request);
+}

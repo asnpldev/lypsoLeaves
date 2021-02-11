@@ -36,33 +36,42 @@
 
         <div class="col-span-3">
 
-            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
-
-                <span class="text-5xl"><?= $userCount['count']?> </span><br>
-                <small>Utilisateurs</small>
+            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
+                <div class="absolute text-9xl opacity-20 text-white text-center mt-1"><i
+                            class="fas fa-user-astronaut"></i></div>
+                <span class="text-5xl"><?= $userCount['count'] ?> </span><br>
+                <small class="text-2xl font-bold">Utilisateurs</small>
             </div>
 
         </div>
-        <div class="col-span-3">
+        <div class="col-span-4">
 
-            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
-
+            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
+                <div class="absolute text-9xl opacity-20 text-white text-center mt-1 w-max"><i
+                            class="fas fa-pen"></i></div>
                 <span class="text-5xl"><?= $treatmentCount['count'] ?></span><br>
-                <small>Demandes en attente</small>
+                <small class="text-2xl font-bold">Demandes en attente</small>
             </div>
 
         </div>
-        <div class="col-span-6">
+        <div class="col-span-5">
 
-            <div class="w-full text-center text-2xl bg-gray-800 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
-
+            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
+                <div class="absolute text-9xl opacity-20 text-white text-center mt-1 w-max"><i
+                            class="fas fa-globe-europe ml-24"></i></div>
                 <span class="text-5xl"><?= $allTreatmentsCount['count'] ?></span><br>
-                <small>Demandes au total</small>
+                <small class="text-2xl font-bold">Demandes au total</small>
             </div>
 
         </div>
+
+
+
 
 
     </div>
+
+    <hr class="border-gray-200 w-full m-2 mt-5">
+
 
 <?php include('template/footer.php') ?>
