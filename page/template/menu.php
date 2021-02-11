@@ -56,6 +56,17 @@ $temp = $_GET['route'];
                            class="<?php if ($temp == "maintenance") { ?>text-indigo-300<?php } else { ?> text-gray-300 <?php } ?> px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900"><i
                                     class="fas fa-pause mr-4"></i>Maintenance</a>
                     </div>
+
+                    <div class="my-12">
+                        <hr class="border-gray-300 ml-6 w-1/6">
+                    </div>
+
+
+                    <div class="w-full text-left m-4 transition duration-200 ease-in-out transform hover:translate-x-2">
+                        <a href="?route=sandbox"
+                           class="<?php if ($temp == "sandbox") { ?>text-indigo-300<?php } else { ?> text-gray-300 <?php } ?> px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900"><i
+                                    class="fas fa-umbrella-beach mr-4"></i>Sandbox</a>
+                    </div>
                 <?php } ?>
 
 

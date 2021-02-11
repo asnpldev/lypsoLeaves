@@ -50,17 +50,21 @@
                 <div class="text-sm text-gray-600 w-96 tracking-tight ">
                     <?= $message ?>
                 </div>
+                <br>
+                <a href="?route=management&action=cancel&id=<?= $cancelId ?>" class="bg-gray-200 p-1 px-2 hover:bg-indigo-500 hover:text-white transition duration-200 cursor-pointer ease-in-out rounded-md text-sm text-gray-500 w-min">
+                    Annuler
+                </a>
             </div>
         </div>
 
     <?php } else if ($type == 1) { ?>
         <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
             <div class="pr-2">
-                <i class="fas fa-exclamation-circle text-red-600"></i>
+                <i class="fas fa-save text-green-800"></i>
             </div>
             <div>
-                <div class="text-sm pb-2 pt-0.5 text-red-600 font-bold">
-                    &mdash; Erreur
+                <div class="text-sm pb-2 pt-0.5 text-green-800 font-bold">
+                    &mdash; Backup (Redo)
                     <span class="float-right " onclick="closeNotif();"><i class="fas fa-times cursor-pointer"></i> </span>
                 </div>
                 <div class="text-sm text-gray-600 w-96 tracking-tight ">

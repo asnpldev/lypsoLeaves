@@ -6,8 +6,8 @@
         <p class="mt-1 max-w-2xl text-sm font-regular text-gray-500">
 
 
-            <a href="#" class="text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">DASHBOARD</a>
-            <a href="#" class="text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full">UTILISATEURS</a>
+            <a href="#" class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">DASHBOARD</a>
+            <a href="#" class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full">UTILISATEURS</a>
         </p>
     </div>
 </div>

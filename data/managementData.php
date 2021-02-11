@@ -15,6 +15,15 @@ function managementData_DeclineRequest($i_id){
 }
 
 
+function managementData_CancelRequest($i_id){
+    $request="UPDATE vacation SET status=0 WHERE id='".$i_id."'";
+    return Connection::exec($request);
+
+
+}
+
+
+
 function managementData_AcceptRequest($i_id){
     $request="UPDATE vacation SET status=1 WHERE id='".$i_id."'";
     return Connection::exec($request);

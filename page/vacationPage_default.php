@@ -86,27 +86,26 @@
                 <form role="form" method="POST" action="?route=vacation&action=store">
                     <div class="overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 sm:p-6">
-                            <div class="grid grid-cols-6 gap-6">
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="first_name" class="block text-sm font-medium text-gray-700">Date de
-                                        début</span></label>
-                                    <input type="date" name="inputStartDate" autocomplete="given-name"
-                                           class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
-                                </div>
+                            <div class="grid grid-cols-12 gap-6">
+                                <div class="col-span-3">
 
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Date de
-                                        fin</label>
-                                    <input type="date" name="inputEndDate" autocomplete="family-name"
-                                           class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+                                    <label for="first_name" class="block text-sm font-medium text-gray-700">Date de début</span></label>
+                                    <input type="date" name="inputStartDate" autocomplete="given-name" class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+
                                 </div>
+                                <div class="col-span-3">
+                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Date de fin</label>
+                                    <input type="date" name="inputEndDate" autocomplete="family-name" class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+
+                                </div>
+                                <div class="col-span-6"></div>
 
 
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-gray-100 text-right sm:px-6">
                             <button type="submit"
-                                    class="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-white bg-blue-500 hover:bg-blue-700 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 Confirmer
                             </button>
                         </div>

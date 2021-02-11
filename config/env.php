@@ -6,7 +6,7 @@ const ENV =[
     'APP_VERSION' => 'v1',
     'APP_AUTHOR'  => 'Nathan G. & Thomas C.',
     // Paramètres pour l'accès à la base de données
-    'DB_HOST'     => '127.0.0.1',
+    'DB_HOST'     => 'localhost',
     'DB_DATABASE' => 'lypso_v0',
     'DB_USERNAME' => 'usersio',
     'DB_PASSWORD' => 'pwsio'

@@ -7,12 +7,12 @@
 
 
             <a href="?route=vacation"
-               class="text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">FAIRE UNE
+               class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">FAIRE UNE
                 DEMANDE</a>
             <a href="?route=vacation&action=requests"
-               class="text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">DEMANDES</a>
+               class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">DEMANDES</a>
             <a href="?route=vacation&action=history"
-               class="text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full ">HISTORIQUE</a>
+               class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full ">HISTORIQUE</a>
         </p>
     </div>
 </div>
