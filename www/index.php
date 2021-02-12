@@ -1,10 +1,6 @@
 <?php
 
 
-//error_reporting(E_ALL);
-//ini_set('display_errors',true);
-//ini_set('display_startup_errors',true);
-
 //DB CONNECTION
 include('../config/env.php');
 
@@ -16,6 +12,7 @@ include('../data/vacationData.php');
 include('../data/managementData.php');
 include('../data/checkDayData.php');
 include('../data/adminData.php');
+include('../data/pendingData.php');
 
 
 
@@ -58,9 +55,6 @@ switch ($route) {
         break;
     case 'management':
         managementControl($action);
-        break;
-    case 'user':
-//        userControl($action);
         break;
     case 'vacation':
         vacationControl($action);

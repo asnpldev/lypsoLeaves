@@ -70,7 +70,12 @@
 
 
     </div>
-    <hr class="border-gray-200 m-2 mt-5">
+    <hr class="border-gray-200 m-2 my-5">
+
+    <a href="https://trello.com/b/TI0XN5kw/conduite-de-projet" class="bg-gray-100 rounded p-3 ml-3" target="_blank">Liens vers le trello</a>
+    <a href="http://127.0.0.1/phpmyadmin" class="bg-gray-100 rounded p-3" target="_blank">BDD</a>
+    <a href="https://tailwindcss.com/docs/customizing-colors#apps" class="bg-gray-100 rounded p-3" target="_blank">Tailwind Colors</a>
+    <a href="https://tailwindcss.com/docs" class="bg-gray-100 rounded p-3" target="_blank">Tailwind docs</a>
 
 
 <?php include('template/footer.php') ?>

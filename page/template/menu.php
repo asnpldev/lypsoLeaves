@@ -87,6 +87,9 @@ $temp = $_GET['route'];
                     case 'admin':
                         include('modules/adminModule.php');
                         break;
+                    case 'agenda':
+                        include('modules/agendaModule.php');
+                        break;
 
                     default:
                         include('modules/defaultModule.php');
