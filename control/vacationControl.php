@@ -10,6 +10,8 @@ function vacationControl($userAction)
         case 'requests':
             vacationControl_requestAction();
             break;
+        case 'history':
+
         default:
             vacationControl_defaultAction();
             break;
@@ -52,5 +54,8 @@ function vacationControl_storeAction()
     include('../page/vacationPage_default.php');
 }
 
+function vacationControl_historyAction()
+{
 
+}
 
