@@ -12,6 +12,12 @@ function userData_findOneWithCredentials($userLogin, $userPwd){
 }
 
 
+function loadvac(){
+
+    $request="SELECT * FROM vacation WHERE user_id='".$_SESSION['user']->getId()."' AND status=1";
+    return Connection::query($request)[0];
+
+}
 
 function loadConnexionHistory(){
 
