@@ -48,7 +48,7 @@
 
             <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
                 <div class="absolute text-9xl opacity-20 text-white text-center mt-1 w-max"><i
-                            class="fas fa-pen"></i></div>
+                            class="fas fa-pencil-ruler"></i></div>
                 <span class="text-5xl"><?= $treatmentCount['count'] ?></span><br>
                 <small class="text-2xl font-bold">Demandes en attente</small>
             </div>
@@ -58,7 +58,7 @@
 
             <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
                 <div class="absolute text-9xl opacity-20 text-white text-center mt-1 w-max"><i
-                            class="fas fa-globe-europe ml-24"></i></div>
+                            class="fas fa-thumbtack ml-24 transform rotate-45"></i></div>
                 <span class="text-5xl"><?= $allTreatmentsCount['count'] ?></span><br>
                 <small class="text-2xl font-bold">Demandes au total</small>
             </div>

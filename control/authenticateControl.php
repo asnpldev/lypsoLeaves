@@ -32,7 +32,7 @@ function authenticateControl_loginAction($login,$password)
 
     if (!$user){
          // Pas d'utilisateur avec ce mail et ce mot de passe. On prépare un message pour la vue
-         $message="Vos identifiants sont incorrects. Merci de réessayer";
+         $message="Vos identifiants sont incorrects. Merci de réessayer...";
          // On appelle la vue par défaut
          $tabTitle="Connexion";
          include('../page/authenticatePage_default.php');
