@@ -3,11 +3,40 @@
         <h3 class="text-lg leading-6 font-medium text-gray-900">
             Modules
         </h3>
+
+        <div class="my-2">
+            <hr class="border-gray-900 w-1/6">
+        </div>
+
+
         <p class="mt-1 max-w-2xl text-sm font-regular text-gray-500">
 
 
-            <a href="#" class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">DASHBOARD</a>
-            <a href="#" class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full">UTILISATEURS</a>
+            <a href="?route=admin" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                ACCUEIL
+            </a>
+
+        </p>
+        <div class="my-2">
+            <hr class="border-gray-900 w-1/6">
+        </div>
+
+        <p class="mt-1 max-w-2xl text-sm font-regular text-gray-500">
+            <a href="?route=admin&action=logs" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                UTILISATEURS
+            </a>
+            <a href="?route=admin&action=roles" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                ROLES
+            </a>
+            <a href="?route=admin&action=permissions" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                PERMISSIONS
+            </a>
+
+
         </p>
     </div>
 </div>

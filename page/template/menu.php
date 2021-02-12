@@ -15,7 +15,7 @@ $temp = $_GET['route'];
                 <div class="w-full text-left m-4 transition duration-200 ease-in-out transform hover:translate-x-2">
                     <a href="?route=dashboard"
                        class="<?php if ($temp == "dashboard") { ?>text-indigo-300<?php } else { ?> text-gray-300 <?php } ?> px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900 "><i
-                                class="fas fa-columns mr-4"></i> Tableau
+                                class="fas fa-columns mr-4"></i>Tableau
                         de bord</a>
                 </div>
 
@@ -28,7 +28,7 @@ $temp = $_GET['route'];
                 <div class="w-full text-left m-4 transition duration-200 ease-in-out transform hover:translate-x-2">
                     <a href="?route=vacation"
                        class="<?php if ($temp == "vacation") { ?>text-indigo-300<?php } else { ?> text-gray-300 <?php } ?> px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900"><i
-                                class="fas fa-map-marker mr-4"></i>Demande de congés</a>
+                                class="fas fa-map-marker mr-4"></i>Demande d'absences</a>
                 </div>
 
                 <div class="w-full text-left m-4 transition duration-200 ease-in-out transform hover:translate-x-2">

@@ -3,19 +3,36 @@
         <h3 class="text-lg leading-6 font-medium text-gray-900">
             Modules
         </h3>
+
+        <div class="my-2">
+            <hr class="border-gray-900 w-1/6">
+        </div>
+
+
         <p class="mt-1 max-w-2xl text-sm font-regular text-gray-500">
 
 
-            <a href="?route=vacation"
-               class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">FAIRE UNE
-                DEMANDE</a>
-            <a href="?route=vacation&action=requests"
-               class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full mb-0.5">DEMANDES</a>
-            <a href="?route=vacation&action=history"
-               class="transition duration-200 ease-in-out transform hover:translate-x-2 text-indigo-600 bg-indigo-200 px-2 inline-flex text-xs leading-5 rounded-full ">HISTORIQUE</a>
+            <a href="?route=vacation" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                NOUVELLE ABSENCE
+            </a>
+            <a href="?route=vacation&action=requests" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                VOS DEMANDES
+            </a>
+            <a href="?route=vacation&action=history" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
+                <span class="text-xl p-2.5 font-extrabold">#</span>
+                HISTORIQUE
+            </a>
+
+
         </p>
     </div>
 </div>
+
+
+
+
 
 
 
