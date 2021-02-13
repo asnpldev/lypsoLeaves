@@ -1,11 +1,13 @@
-#### LypsoLeaves
+### LypsoLeaves
 <hr>
 
 
 [![Build Status](https://travis-ci.org/asnpldev/lypsoLeaves.png?branch=main)](https://travis-ci.org/asnpldev/lypsoLeaves)
 
-<hr>
+<br><br>
+
 > Page d'authentification
+
 <img src="https://i.imgur.com/5EkqlK0_d.webp?maxwidth=760&fidelity=grand">
 
 ###### Aide (git)
