@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME})
 
+<img src="https://i.imgur.com/5EkqlK0_d.webp?maxwidth=760&fidelity=grand">
 
 `git add .` _(Ajoute tout les fichiers dans le dossier dans le package qui sera envoyé après)_<br>
 `git commit -m "ton message"` _(Créer le package avec un message obligatoire pour pouvoir envoyer sa version en ligne)_<br>
