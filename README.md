@@ -1,6 +1,7 @@
 # lypsoLeaves
 
 
+[![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME})
 
 
 `git add .` _(Ajoute tout les fichiers dans le dossier dans le package qui sera envoyé après)_<br>
