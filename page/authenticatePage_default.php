@@ -15,7 +15,7 @@
 <body class="hold-transition login-page">
 
 
-<?php if (isset($message)) {
+<?php if (!empty($message)) {
 
     ?>
     <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
