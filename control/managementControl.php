@@ -4,6 +4,24 @@
 function managementControl($userAction)
 {
     switch ($userAction) {
+        case 'filter':
+                if(isset($_POST['searchbar'])){
+
+                    if(strlen($_POST['searchbar']) >= 30){
+
+                        managementControl_MessageAction(2, 'Vous ne pouvez pas chercher plus de 25 caractères',0);
+                    } else if(strlen($_POST['searchbar']) <= 0){
+                        managementControl_MessageAction(2, 'Vous ne pouvez pas faire une recherche vide',0);
+                    } else {
+                        $sb = $_POST['searchbar'];
+                        managementControl_searchAction($sb);
+                    }
+
+
+
+
+                }
+            break;
         case 'accept':
             if (isset($_GET['id'])) {
                 $tempId = $_GET['id'];
@@ -53,6 +71,15 @@ function managementControl_MessageAction(int $id, string $content, int $tempId)
     $actualRequests = managementRequests_getAll();
     include('../page/managementPage_default.php');
 }
+
+function managementControl_searchAction($sb)
+{
+    $tabTitle = "Management";
+    $filter = $sb;
+    $actualRequests = managementRequests_getSearch($sb);
+    include('../page/managementPage_default.php');
+}
+
 
 
 function managementControl_defaultAction()

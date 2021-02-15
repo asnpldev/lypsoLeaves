@@ -1,34 +1,29 @@
 <?php include('../page/template/header.php'); ?>
 
 
-   <!-- <div class="bg-yellow-600">
-        <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between flex-wrap">
-                <div class="w-0 flex-1 flex items-center">
-                     <span class="flex p-2 rounded-lg bg-yellow-800">
-                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor" aria-hidden="false"><path stroke-linecap="round"
-                                                                             stroke-linejoin="round"
-                                                                             stroke-width="2"
-                                                                             d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
-                     </span>
+    <!-- <div class="bg-yellow-600">
+         <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+             <div class="flex items-center justify-between flex-wrap">
+                 <div class="w-0 flex-1 flex items-center">
+                      <span class="flex p-2 rounded-lg bg-yellow-800">
+                         <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor" aria-hidden="false"><path stroke-linecap="round"
+                                                                              stroke-linejoin="round"
+                                                                              stroke-width="2"
+                                                                              d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                      </span>
 
-                     <p class="ml-3 font-medium text-white truncate">
-                         <span class="hidden md:inline"> Attention, le site est actuellement en maintenance ! (Accès réservé uniquement aux administrateurs) </span>
-                     </p>
-                </div>
-                <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-                    <a href="#" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-yellow-600 bg-white hover:bg-blue-50">Changer </a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-
-
-
-
+                      <p class="ml-3 font-medium text-white truncate">
+                          <span class="hidden md:inline"> Attention, le site est actuellement en maintenance ! (Accès réservé uniquement aux administrateurs) </span>
+                      </p>
+                 </div>
+                 <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+                     <a href="#" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-yellow-600 bg-white hover:bg-blue-50">Changer </a>
+                 </div>
+             </div>
+         </div>
+     </div>-->
 
 
     <div class="bg-gray-50">
@@ -106,15 +101,51 @@
             </div>
         </div>
 
+    <?php } else { ?>
+        <div class="disapear w-2/6 w-max absolute top-0 right-1 shadow-2xl rounded-lg bg-white mx-auto mt-1 p-4 notification-box flex">
+            <div class="pr-2">
+                <i class="fas fa-times text-red-800"></i>
+            </div>
+            <div>
+                <div class="text-sm pb-2 pt-0.5 text-red-800 font-bold">
+                    &mdash; Erreur
+                    <span class="float-right " onclick="closeNotif();"><i
+                                class="fas fa-times cursor-pointer"></i> </span>
+                </div>
+                <div class="text-sm text-gray-600 w-96 tracking-tight ">
+                    <?= $message ?>
+                </div>
+            </div>
+        </div>
     <?php }
 } ?>
 
+
+    <div class="bg-gray-50 border-t border-gray-200">
+        <div class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            FILTRES
+
+            <?php if (isset($filter)) { ?>
+                <span class="ml-3 text-red-600 bg-red-100 px-2 py-0.5 text-xs rounded-full"><a href="?route=management"><i
+                                class="fas fa-times-circle mr-0.5"></i></a><?= $filter ?></span>
+            <?php } ?>
+            <form action="?route=management&action=filter" METHOD="post" class="float-right">
+                <input type="search" placeholder="Rechercher" name="searchbar"
+                       class="px-2.5  h-6 border-gray-300 border rounded bg-gray-100 focus:border-transparent">
+                <input type="submit" value="Chercher" class="rounded px-2 py-0.5 text-xs cursor-pointer">
+            </form>
+
+
+        </div>
+
+
+    </div>
 
     <div class="overflow-y-auto" style="max-height: 750px;">
         <div class="flex flex-col ">
             <div class="overflow-x-auto">
                 <div class="align-middle inline-block min-w-full">
-                    <div class="overflow-hidden border-b border-t border-gray-200 ">
+                    <div class="overflow-hidden border-b border-t border-gray-200">
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">
                             <tr>
@@ -152,7 +183,8 @@
                                         <div class="text-sm text-gray-900">Demande de congés</div>
                                         <div class="text-sm text-gray-500">
 
-                                            Aucune demande en attente, veuillez revenir plus tard..
+                                            Aucune demande correspond à votre recherche ou aucune demande en attente,
+                                            veuillez revenir plus tard..
 
                                     </td>
 

@@ -16,7 +16,7 @@ function agendaControl($userAction)
 
 function agendaControl_defaultAction()
 {
-    $tabTitle = "Origin";
+    $tabTitle = "null";
 
 
     $message = "";
