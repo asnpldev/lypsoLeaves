@@ -180,7 +180,7 @@
                                 <tr>
 
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm text-gray-900">Demande de congés</div>
+                                        <div class="text-sm text-gray-900">Demandes</div>
                                         <div class="text-sm text-gray-500">
 
                                             Aucune demande correspond à votre recherche ou aucune demande en attente,
@@ -222,7 +222,7 @@
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm text-gray-900">Demande de congés
+                                            <div class="text-sm text-gray-900">Demandes d'absence
                                                 #<?= $actualRequest['vacid'] ?></div>
                                             <div class="text-sm text-gray-500">
                                                 Du <?php echo date('d/m/y', strtotime($actualRequest['start']))

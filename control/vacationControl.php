@@ -28,7 +28,7 @@ function vacationControl_requestAction()
 
 function vacationControl_defaultAction()
 {
-    $tabTitle = "Demande de congés";
+    $tabTitle = "Demandes d'absence";
     $vacationRequest = user_findVacations();
     include('../page/vacationPage_default.php');
 }
@@ -42,15 +42,15 @@ function vacationControl_storeAction()
     $dbExec = vacation_storeAction($datas);
 
     if ($dbExec > 0) {
-        $message = "Votre demande de  congé à été envoyée avec succès.";
+        $message = "Votre demande d'absence à été envoyée avec succès.";
         $type = 0;
     } else {
-        $message = "Il y a un problème dans la demande de congé, veuillez vérifier quelle soit bien valide !";
+        $message = "Il y a un problème dans la demande d'absence, veuillez vérifier quelle soit bien valide !";
         $type = 1;
     }
 
 
-    $tabTitle = "Demande de congés";
+    $tabTitle = "Demandes d'absence";
     $vacationRequest = user_findVacations();
     include('../page/vacationPage_default.php');
 }
