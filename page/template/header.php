@@ -59,8 +59,8 @@
     </div>
 
 </nav>
+<?php include('../page/template/menu.php')?>
 
 
-<?php include('../page/template/menu.php'); ?>
 
 

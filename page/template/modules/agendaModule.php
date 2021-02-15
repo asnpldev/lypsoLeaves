@@ -14,11 +14,11 @@
 
             <a href="?route=agenda" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
                 <span class="text-xl p-2.5 font-extrabold">#</span>
-                DASHBOARD
+                DASHBOARD <i class="fas fa-check-circle text-green-700"></i>
             </a>
             <a href="?route=agenda&action=default" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
                 <span class="text-xl p-2.5 font-extrabold">#</span>
-                PERSO
+                PERSO (soon deleted)
             </a>
 
 

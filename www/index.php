@@ -49,32 +49,50 @@ if (!isset($_SESSION['user'])) {
     $route = 'authenticate';
 }
 
-switch ($route) {
-    case 'dashboard':
-        dashboardControl($action);
-        break;
-    case 'management':
-        managementControl($action);
-        break;
-    case 'vacation':
-        vacationControl($action);
-        break;
-    case 'agenda':
-        agendaControl($action);
-        break;
-    case 'authenticate':
-        authenticateControl($action);
-        break;
-    case 'maintenance':
-        maintenanceControl($action);
-        break;
-    case 'admin':
-        adminControl($action);
-        break;
-    default:
-        ErrorExpControl($action);
-        break;
-}
 
+//function checkMaintenance()
+//{
+//
+//
+//    $request = "SELECT * FROM test";
+//    return Connection::query($request)[0];
+//}
+//
+//$testdb = checkMaintenance();
+//
+//if ($testdb['maintenance'] == 1) {
+//
+//    echo "noo";
+//
+//} else {
+
+
+    switch ($route) {
+        case 'dashboard':
+            dashboardControl($action);
+            break;
+        case 'management':
+            managementControl($action);
+            break;
+        case 'vacation':
+            vacationControl($action);
+            break;
+        case 'agenda':
+            agendaControl($action);
+            break;
+        case 'authenticate':
+            authenticateControl($action);
+            break;
+        case 'maintenance':
+            maintenanceControl($action);
+            break;
+        case 'admin':
+            adminControl($action);
+            break;
+        default:
+            ErrorExpControl($action);
+            break;
+    }
+//}
 
 
