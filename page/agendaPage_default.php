@@ -46,70 +46,114 @@
     </div>
 
 
-    <div class="h-96 p-2">
-        <div class="overscroll-y-contain">
-
-
-            <form action="?route=agenda&action=checkvacation" method="POST">
-                <label for="start">Début : </label>
-                <input class="border border-gray-500 rounded-full py-0.5 px-2 mr-5" type="date" placeholder="début"
-                       name="start">
-
-                <label for="end">Fin : </label>
-                <input class="border border-gray-500 rounded-full py-0.5 px-2 mr-5" type="date" placeholder="fin"
-                       name="end">
-
-
-                <input type="submit" class="py-0.5 px-2 rounded-full bg-green-600 cursor-pointer">
-            </form>
-            <br><br>
-
-
-            <?php
-            if (isset($countRowsDays)) {
-                $intDays = (int)$countRowsDays;
-            }
-
-            if (isset($_POST['start']) and isset($_POST['end']) and isset($intDays)) {
-                echo "Résultat pour " . $_POST['start'] . " > " . $_POST['end'] . " (soit " . $intDays . " jours)<br><br>";
-            }
-
-
-            //            for ($i = 0; $i <= $intDays; $i++) { ?>
-            <!--                <div class="bg-blue-200 inline-block p-10 w-max rounded">-->
-            <!--                    --><? //= $i ?>
-            <!--                </div>-->
-            <div class="grid grid-cols-12 gap-1">
-                <!--            --><?php //}
-                //
-
-                if (isset($checkingActualVacations)) {
-                    foreach ($checkingActualVacations as $checkingActualVacation) {
-
-
-                        ?>
-
+    <div class="mt-5 bg-gray-50 md:mt-0 md:col-span-2">
+        <form role="form" method="POST" action="?route=agenda&action=checkvacation">
+            <div class="overflow-hidden sm:rounded-md">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="grid grid-cols-12 gap-6">
                         <div class="col-span-3">
-                            <div class="bg-blue-50 p-10 rounded  text-gray-700">
-                                <i class="fas fa-calendar-day text-xl mr-5 float-left"></i>
-                                <br>
-                                Du
-                                <span class="bg-gray-300 px-2.5 rounded-full"><?= date('d/m/y', strtotime($checkingActualVacation['start'])) ?>
+
+                            <label for="first_name" class="block text-sm font-medium text-gray-700"> Date de
+                                début<sup><i class="fas fa-asterisk text-blue-500 text-xs"></i></sup></span></label>
+                            <input type="date" name="start" autocomplete="given-name"
+                                   class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+
+                        </div>
+                        <div class="col-span-3">
+                            <label for="last_name" class="block text-sm font-medium text-gray-700">Date de fin<sup><i
+                                            class="fas fa-asterisk text-blue-500 text-xs"></i></sup></label>
+                            <input type="date" name="end" autocomplete="family-name"
+                                   class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+
+                        </div>
+                        <div class="col-span-6"></div>
+
+
+                    </div>
+                </div>
+                <div class="px-4 py-3 bg-gray-100 text-right sm:px-6">
+                    <button type="submit"
+                            class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Confirmer
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+        <?php
+
+
+        //Script qui calcul le temps (en jours entre les deux dates)
+        if (isset($countRowsDays)) {
+            $intDays = (int)$countRowsDays;
+        } ?>
+
+
+        <?php
+
+        if (isset($_POST['start']) and isset($_POST['end']) and isset($intDays)) {?>
+
+
+
+        <div class="px-4 py-3 bg-gray-100 border-t border-gray-300 sm:px-6">
+
+
+            <?= $totalReturn ?> résultat(s) pour : <?= date('d/m/y', strtotime($_POST['start'])) ?>
+
+            <i class="fas fa-long-arrow-alt-right text-gray-700"></i>
+
+            <?= date('d/m/y', strtotime($_POST['end'])) ?> <small>(<?= $intDays?> Jours d'intervalle)</small>
+
+
+        </div>
+        <?php }
+
+        ?>
+
+    <div class="p-3">
+        <div class="grid grid-cols-12 gap-1">
+            <?php
+
+
+            //Boucle qui cherche toutes les demandes acceptés entre les dates sélectionnées.
+            if (isset($checkingActualVacations)) {
+                foreach ($checkingActualVacations as $checkingActualVacation) {
+
+
+                    ?>
+
+                    <div class="col-span-3">
+
+                        <div class="bg-blue-50 rounded p-10 text-gray-700 transform transition duration-200 hover:scale-105 hover:bg-blue-100">
+                            <a href="?route=management&action=overview&id=<?= $checkingActualVacation['vacation_id'] ?>"
+                               class="p-8">
+
+                                <i class="fas fa-calendar-day text-2xl text-gray-500 mr-1 float-left"></i>
+
+
+                                <span class="bg-gray-300 px-2.5 rounded-full float-left">Du <?= date('d/m/y', strtotime($checkingActualVacation['start'])) ?>
                                 au
                                <?= date('d/m/y', strtotime($checkingActualVacation['end'])) ?></span>
                                 <br>
-                                <a href="#" class="text-blue-600"><?= $checkingActualVacation['lastname'] . ' ' . $checkingActualVacation['firstname'] ?></a>
-                                &mdash; <small><?= $checkingActualVacation['nom']?></small>
-                            </div>
+                                <a href="#"
+                                   class="text-blue-600"><?= $checkingActualVacation['lastname'] . ' ' . $checkingActualVacation['firstname'] ?></a>
+                                &mdash; <small><?= $checkingActualVacation['nom'] ?></small>
+                            </a>
                         </div>
 
+                    </div>
 
-                        <?php
-                    }
+
+                    <?php
                 }
-                ?>
+            }
+            ?>
 
-            </div>
         </div>
     </div>
 

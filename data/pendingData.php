@@ -15,7 +15,9 @@ function actualConges()
 
 function imCheckingVacation($dateStart, $dateEnd){
 
-    $request = "SELECT * FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE start BETWEEN '".$dateStart."' AND '".$dateEnd."' AND end BETWEEN '".$dateStart."' AND '".$dateEnd."'";
+    $request = "SELECT *, vacation.id AS 'vacation_id' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE start BETWEEN '".$dateStart."' AND '".$dateEnd."' AND end BETWEEN '".$dateStart."' AND '".$dateEnd."' AND status=1";
     return Connection::query($request);
 
 }
+
+
