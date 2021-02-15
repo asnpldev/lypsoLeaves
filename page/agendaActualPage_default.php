@@ -32,7 +32,7 @@
                     <br>
 
 
-                    <?php var_dump($actualConges);
+                    <?php
                 } else { //SINON ?>
 
 
@@ -54,7 +54,7 @@
                 <?php } ?>
             </div>
             <div class="col-span-6">
-                aaa
+
 
             </div>
 

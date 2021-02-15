@@ -8,7 +8,7 @@ function managementRequests_getAll(){
 }
 
 function managementRequests_getSearch($sb){
-    $request="SELECT *, vacation.id AS 'vacid' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE vacation.status=0 AND firstname='".$sb."' OR lastname='".$sb."' ORDER BY vacation.id DESC";
+    $request="SELECT *, vacation.id AS 'vacid' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE vacation.status=0 AND firstname='".$sb."' OR lastname='".$sb."' AND status=0 ORDER BY vacation.id DESC";
     return Connection::query($request);
 }
 
