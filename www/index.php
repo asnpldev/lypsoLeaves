@@ -15,7 +15,6 @@ include('../data/adminData.php');
 include('../data/pendingData.php');
 
 
-
 //CLASS
 include('../data/User.php');
 
@@ -67,32 +66,32 @@ if (!isset($_SESSION['user'])) {
 //} else {
 
 
-    switch ($route) {
-        case 'dashboard':
-            dashboardControl($action);
-            break;
-        case 'management':
-            managementControl($action);
-            break;
-        case 'vacation':
-            vacationControl($action);
-            break;
-        case 'agenda':
-            agendaControl($action);
-            break;
-        case 'authenticate':
-            authenticateControl($action);
-            break;
-        case 'maintenance':
-            maintenanceControl($action);
-            break;
-        case 'admin':
-            adminControl($action);
-            break;
-        default:
-            ErrorExpControl($action);
-            break;
-    }
+switch ($route) {
+    case 'dashboard':
+        dashboardControl($action);
+        break;
+    case 'management':
+        managementControl($action);
+        break;
+    case 'vacation':
+        vacationControl($action);
+        break;
+    case 'agenda':
+        agendaControl($action);
+        break;
+    case 'authenticate':
+        authenticateControl($action);
+        break;
+    case 'maintenance':
+        maintenanceControl($action);
+        break;
+    case 'admin':
+        adminControl($action);
+        break;
+    default:
+        ErrorExpControl($action);
+        break;
+}
 //}
 
 
