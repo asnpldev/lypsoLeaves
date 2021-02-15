@@ -9,8 +9,7 @@
 
                     $absenceStart = new DateTime(date('Y-m-d'));
                     $absenceEnd = new DateTime($actualConges[0]['end']);
-                    $days =$absenceStart->diff($absenceEnd)->format('%a');
-
+                    $days = $absenceStart->diff($absenceEnd)->format('%a');
 
 
                     ?>
@@ -21,7 +20,10 @@
                         </div>
                         <div class="col-span-8">
                             <h4 class="font-semibold text-white text-xl">&mdash; Vous êtes actuellement en absence</h4>
-                            <p class="text-white">Le début de votre absence est du <?= date('d/m/y', strtotime($actualConges[0]['start'])) ?> jusqu'au <?= date('d/m/y', strtotime($actualConges[0]['end'])) ?>, il vous reste encore <?= $days ?> jour(s) d'absence(s)</p>
+                            <p class="text-white">Le début de votre absence est
+                                du <?= date('d/m/y', strtotime($actualConges[0]['start'])) ?>
+                                jusqu'au <?= date('d/m/y', strtotime($actualConges[0]['end'])) ?>, il vous reste
+                                encore <?= $days ?> jour(s) d'absence(s)</p>
                         </div>
 
 
@@ -30,8 +32,8 @@
                     <br>
 
 
-
-                <?php var_dump($actualConges); } else { //SINON ?>
+                    <?php var_dump($actualConges);
+                } else { //SINON ?>
 
 
                     <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-red-500 to-yellow-500 rounded-3xl">
@@ -40,7 +42,9 @@
                         </div>
                         <div class="col-span-8">
                             <h4 class="font-semibold text-white text-xl">&mdash; Aucune absence en ce moment</h4>
-                            <p class="text-white">Besoin de prendre une absence ? Cliquez <a href="?route=vacation" class="bg-white px-2 rounded text-red-400 font-bold">ici</a></p>
+                            <p class="text-white">Besoin de prendre une absence ? Cliquez <a href="?route=vacation"
+                                                                                             class="bg-white px-2 rounded text-red-400 font-bold">ici</a>
+                            </p>
                         </div>
 
 

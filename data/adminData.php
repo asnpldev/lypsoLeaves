@@ -7,6 +7,8 @@ function userRowCount()
     return Connection::query($request)[0];
 }
 
+
+//SELECT * FROM vacation WHERE start BETWEEN '2021-02-10' AND '2021-03-01' AND end BETWEEN '2021-02-10' AND '2021-03-01'
 function treatmentWaitingRowCount()
 {
 
