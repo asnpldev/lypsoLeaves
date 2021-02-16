@@ -39,5 +39,121 @@
                 </p>
             </div>
         </div>
+
+        <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class=" overflow-hidden border-b border-gray-200">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Nom : Prénom
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    SUJET
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Date début
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Date fin
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Status
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Département
+                                </th>
+
+                            </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                            <?php if (empty($vacationHistoryRequest)) { ?>
+
+
+                                <tr>
+
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Oops !</div>
+                                        <div class="text-sm text-gray-500">
+
+                                            Aucune demande traitée..
+
+                                    </td>
+
+
+                                </tr>
+
+                            <?php } else {
+
+                                foreach ($vacationHistoryRequest as $vacationHistoryRequests) {?>
+                                    <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <?php if ($vacationHistoryRequests['sx'] == "M") { ?>
+
+                                                    <img class="h-10 w-10 rounded-full" src="../page/img/boy.svg"
+                                                         alt="">
+                                                <?php } else { ?>
+                                                    <img class="h-10 w-10 rounded-full"
+                                                         src="../page/img/girl.svg">
+
+
+                                                <?php } ?>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    <?= $vacationHistoryRequests['lastname'] . ' '. $vacationHistoryRequests['firstname']?> (Vous)
+                                                </div>
+                                                <div class="text-sm text-gray-500">
+                                                    <?= $vacationHistoryRequests['login'] ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Demandes d'absence</div>
+
+                                    </td>
+
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <?= $vacationHistoryRequests['start']?>
+                                    </td>
+
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <?= $vacationHistoryRequests['end']?>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <?php if ($vacationHistoryRequests['status']==1){ ?>
+                                        <span class="text-green-600 bg-green-100 px-2 inline-flex text-xs leading-5 rounded-full">
+                                            Validée
+                                        </span>
+                                        <?php } else{ ?>
+                                        <span class="text-indigo-600 bg-indigo-100 px-2 inline-flex text-xs leading-5 rounded-full">
+                                            Refusée
+                                        </span>
+                                        <?php } ?>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <?= $vacationHistoryRequests['nom']//départment de la personne?>
+                                    </td>
+
+                                    </tr><?php } }?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </div>

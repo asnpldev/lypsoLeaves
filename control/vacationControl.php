@@ -58,7 +58,7 @@ function vacationControl_storeAction()
 function vacationControl_historyAction()
 {
     $tabTitle = "Historique des demandes";
-    $vacationRequest = user_findVacations();
+    $vacationHistoryRequest = user_findHistoryVacation();
     include('../page/vacationPage_history.php');
 }
 

@@ -44,3 +44,9 @@ function user_findVacations(){
     $request="SELECT * FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE user_id='".$_SESSION['user']->getId()."' AND status=0";
     return Connection::query($request);
 }
+
+//DEMANDES TRAITEE (soit status==1 ou status==2)
+function user_findHistoryVacation(){
+    $request="SELECT * FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE user_id='".$_SESSION['user']->getId()."' AND status=1 OR status=2";
+    return Connection::query($request);
+}
