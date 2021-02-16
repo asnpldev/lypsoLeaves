@@ -21,7 +21,7 @@ function loadvac(){
 
 function loadConnexionHistory(){
 
-    $request="SELECT * FROM logip WHERE user_id='".$_SESSION['user']->getId()."' ORDER BY log_date DESC";
+    $request="SELECT * FROM logip WHERE user_id='".$_SESSION['user']->getId()."' ORDER BY log_date DESC LIMIT 10";
     return Connection::query($request);
 
 

@@ -2,12 +2,24 @@
 
 function adminControl($userAction){
     switch ($userAction){
+        case 'users':
+            adminControl_userAction();
+            break;
         // case à ajouter pour chaque nouvelle action souhaitée
         default:
             adminControl_defaultAction();
         break;
     }
 }
+
+function adminControl_userAction()
+{
+    $tabTitle="Utilisateurs";
+
+
+    include('../page/adminPage_users.php');
+}
+
 
 
 function adminControl_defaultAction()
@@ -17,7 +29,7 @@ function adminControl_defaultAction()
     $treatmentCount = treatmentWaitingRowCount();
     $allTreatmentsCount = treatmentAllRowCount();
     $userCount = userRowCount();
-    include('../page/admin_AdminPage_default.php');
+    include('../page/adminPage_default.php');
 }
 
 

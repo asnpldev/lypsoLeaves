@@ -46,9 +46,10 @@
 
                     ?>
 
-                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-purple-400 to-blue-500 h-48 rounded-3xl">
+                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-purple-500 to-blue-700 h-28 rounded-3xl">
                         <div class="col-span-4">
-                            <img src="../page/img/gotcongee.png" class="ml-3 w-min">
+                            <i class="far fa-sparkles text-6xl ml-20 mt-2 text-white"></i>
+                            <!--<img src="../page/img/gotcongee.png" class="ml-10 w-28">-->
                         </div>
                         <div class="col-span-8">
                             <h4 class="font-semibold text-white text-xl">Vous êtes actuellement en absence</h4>
@@ -68,9 +69,9 @@
                 } else { //SINON ?>
 
 
-                    <div class="grid grid-cols-12 gap-10 w-full text-white p-5 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl h-48">
+                    <div class="grid grid-cols-12 gap-10 w-full text-white p-5 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl h-28">
                         <div class="col-span-4">
-                            <i class="fa fa-book text-9xl ml-10 mt-4 text-gray-700"></i>
+                            <i class="fa fa-book text-6xl ml-20 mt-2  text-gray-700"></i>
                         </div>
                         <div class="col-span-8">
                             <h4 class="font-semibold text-white text-xl">Aucune absence en ce moment</h4>
@@ -93,33 +94,36 @@
         </div>
 
 
-<!--        --><?php
-//
-//        foreach ($iplogger as $log) {
-//            ?>
-<!---->
-<!---->
-<!--            <div class="flex items-center">-->
-<!--                <div class="flex-shrink-0 h-10 w-10">-->
-<!---->
-<!---->
-<!--                    <span class="bg-blue-700 px-1 py-0.5 text-white text-xs rounded uppercase float-left mt-2.5 mr-1.5 h-7 w-7  text-center"></span>-->
-<!--                </div>-->
-<!--                <div class="ml-1">-->
-<!--                    <div class="text-sm font-medium text-gray-900">-->
-<!--                        --><?php //echo $_SESSION['user']->getLogin(); ?>
-<!--                    </div>-->
-<!--                    <div class="text-sm text-gray-500">-->
-<!--                        <span class="text-blue-500">--><?//= $log['ip'] ?><!--</span>-->
-<!--                        &mdash; --><?//= $log['city'] ?><!--, --><?//= $log['region'] ?><!--, --><?//= $log['country'] ?>
-<!--                        | --><?//= date('d/m/Y \à H:i:s', strtotime($log['log_date'])); ?>
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--        --><?php //}
-//
-//        ?>
+        <?php
+
+        foreach ($iplogger as $log) {
+            ?>
+
+
+            <div class="flex items-center">
+                <div class="flex-shrink-0 h-10 w-10">
+
+
+                    <span class="bg-blue-700 px-1 py-0.5 text-white text-xs rounded uppercase float-left mt-2.5 mr-1.5 h-7 w-7  text-center">
+
+                        <i class="far fa-clock mt-1.5"></i>
+                    </span>
+                </div>
+                <div class="ml-1">
+                    <div class="text-sm font-medium text-gray-900">
+                        <?php echo $_SESSION['user']->getLogin(); ?>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        <span class="text-blue-500"><?= $log['ip'] ?></span>
+                        &mdash; <?= $log['city'] ?>, <?= $log['region'] ?>, <?= $log['country'] ?>
+                        | <?= date('d/m/Y \à H:i:s', strtotime($log['log_date'])); ?>
+                    </div>
+                </div>
+            </div>
+
+        <?php }
+
+        ?>
 
 
     </div>

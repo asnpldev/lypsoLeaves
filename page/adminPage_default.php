@@ -36,7 +36,7 @@
 
         <div class="col-span-3">
 
-            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
+            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-500 to-blue-700 text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900 ">
                 <div class="absolute text-9xl opacity-20 text-white text-center mt-1"><i
                             class="fas fa-user-astronaut"></i></div>
                 <span class="text-5xl"><?= $userCount['count'] ?> </span><br>
@@ -46,7 +46,7 @@
         </div>
         <div class="col-span-4">
 
-            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
+            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-500 to-blue-700  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
                 <div class="absolute text-9xl opacity-20 text-white text-center mt-1 w-max"><i
                             class="fas fa-pencil-ruler"></i></div>
                 <span class="text-5xl"><?= $treatmentCount['count'] ?></span><br>
@@ -56,7 +56,7 @@
         </div>
         <div class="col-span-5">
 
-            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
+            <div class="w-full text-center 2xl:font-bold bg-gradient-to-r from-purple-500 to-blue-700  text-white rounded-md p-12 transition duration-200 ease-in-out hover:bg-gray-900">
                 <div class="absolute text-9xl opacity-20 text-white text-center mt-1 w-max"><i
                             class="fas fa-thumbtack ml-24 transform rotate-45"></i></div>
                 <span class="text-5xl"><?= $allTreatmentsCount['count'] ?></span><br>
