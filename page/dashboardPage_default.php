@@ -46,12 +46,12 @@
 
                     ?>
 
-                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-purple-400 to-blue-500 rounded-3xl">
+                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-purple-400 to-blue-500 h-48 rounded-3xl">
                         <div class="col-span-4">
                             <img src="../page/img/gotcongee.png" class="ml-3 w-min">
                         </div>
                         <div class="col-span-8">
-                            <h4 class="font-semibold text-white text-xl">&mdash; Vous êtes actuellement en absence</h4>
+                            <h4 class="font-semibold text-white text-xl">Vous êtes actuellement en absence</h4>
                             <p class="text-white">Le début de votre absence est
                                 du <?= date('d/m/y', strtotime($actualConges[0]['start'])) ?>
                                 jusqu'au <?= date('d/m/y', strtotime($actualConges[0]['end'])) ?>, il vous reste
@@ -68,14 +68,14 @@
                 } else { //SINON ?>
 
 
-                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-red-500 to-yellow-500 rounded-3xl">
+                    <div class="grid grid-cols-12 gap-10 w-full text-white p-5 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl h-48">
                         <div class="col-span-4">
-                            <img src="../page/img/lamp.png" class="ml-3 w-min">
+                            <i class="fa fa-book text-9xl ml-10 mt-4 text-gray-700"></i>
                         </div>
                         <div class="col-span-8">
-                            <h4 class="font-semibold text-white text-xl">&mdash; Aucune absence en ce moment</h4>
+                            <h4 class="font-semibold text-white text-xl">Aucune absence en ce moment</h4>
                             <p class="text-white">Besoin de prendre une absence ? Cliquez <a href="?route=vacation"
-                                                                                             class="bg-white px-2 rounded text-red-400 font-bold">ici</a>
+                                                                                             class="bg-white px-2 rounded text-gray-900 font-bold">ici</a>
                             </p>
                         </div>
 
