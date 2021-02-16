@@ -34,7 +34,63 @@
 
 
     <div class="p-2">
+        <div class="grid grid-cols-12">
 
+            <div class="col-span-6">
+                <?php if (isset($actualConges[0])) { //SI LA PERSONNE EST EN CONGES
+
+                    $absenceStart = new DateTime(date('Y-m-d'));
+                    $absenceEnd = new DateTime($actualConges[0]['end']);
+                    $days = $absenceStart->diff($absenceEnd)->format('%a');
+
+
+                    ?>
+
+                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-purple-400 to-blue-500 rounded-3xl">
+                        <div class="col-span-4">
+                            <img src="../page/img/gotcongee.png" class="ml-3 w-min">
+                        </div>
+                        <div class="col-span-8">
+                            <h4 class="font-semibold text-white text-xl">&mdash; Vous êtes actuellement en absence</h4>
+                            <p class="text-white">Le début de votre absence est
+                                du <?= date('d/m/y', strtotime($actualConges[0]['start'])) ?>
+                                jusqu'au <?= date('d/m/y', strtotime($actualConges[0]['end'])) ?>, il vous reste
+                                encore <?= $days ?> jour(s) d'absence(s)</p>
+                        </div>
+
+
+                    </div>
+
+                    <br>
+
+
+                    <?php
+                } else { //SINON ?>
+
+
+                    <div class="grid grid-cols-12 gap-10 w-full p-5 bg-gradient-to-r from-red-500 to-yellow-500 rounded-3xl">
+                        <div class="col-span-4">
+                            <img src="../page/img/lamp.png" class="ml-3 w-min">
+                        </div>
+                        <div class="col-span-8">
+                            <h4 class="font-semibold text-white text-xl">&mdash; Aucune absence en ce moment</h4>
+                            <p class="text-white">Besoin de prendre une absence ? Cliquez <a href="?route=vacation"
+                                                                                             class="bg-white px-2 rounded text-red-400 font-bold">ici</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                <?php } ?>
+            </div>
+            <div class="col-span-6">
+
+
+            </div>
+
+        </div>
 
 
 <!--        --><?php
