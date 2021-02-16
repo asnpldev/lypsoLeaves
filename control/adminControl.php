@@ -17,6 +17,7 @@ function adminControl_userAction()
     $tabTitle="Utilisateurs";
 
 
+    $userLists = admin_user_getAll();
     include('../page/adminPage_users.php');
 }
 
