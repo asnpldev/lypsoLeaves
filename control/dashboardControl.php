@@ -16,7 +16,7 @@ function dashboardControl_defaultAction()
 
 
     $actualConges = actualConges();
-    $iplogger=loadConnexionHistory();
+    //$iplogger=loadConnexionHistory();
     //$vacations = user_findVacations($_SESSION['user']['id']);
     include('../page/dashboardPage_default.php');
 }

@@ -4,6 +4,15 @@
 function managementControl($userAction)
 {
     switch ($userAction) {
+        case 'overview':
+                if(isset($_GET['id']))
+                {
+
+                    $getId = $_GET['id'];
+                    managementOverview_viewAction($getId);
+
+                }
+            break;
         case 'filter':
                 if(isset($_POST['searchbar'])){
 
@@ -61,6 +70,13 @@ function managementControl($userAction)
     }
 }
 
+
+function managementOverview_viewAction($id){
+
+
+    $datas = managementData_overviewRequest($id);
+    include('../page/managementPage_overview.php');
+}
 
 function managementControl_MessageAction(int $id, string $content, int $tempId)
 {

@@ -140,8 +140,8 @@
                                 au
                                <?= date('d/m/y', strtotime($checkingActualVacation['end'])) ?></span>
                                 <br>
-                                <a href="#"
-                                   class="text-blue-600"><?= $checkingActualVacation['lastname'] . ' ' . $checkingActualVacation['firstname'] ?></a>
+                                <span href="#"
+                                   class="text-blue-600"><?= $checkingActualVacation['lastname'] . ' ' . $checkingActualVacation['firstname'] ?></span>
                                 &mdash; <small><?= $checkingActualVacation['nom'] ?></small>
                             </a>
                         </div>

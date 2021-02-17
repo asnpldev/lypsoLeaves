@@ -37,3 +37,11 @@ function managementData_AcceptRequest($i_id){
 
 }
 
+
+function managementData_overviewRequest($i_id){
+
+    $request="SELECT *, vacation.id AS 'vacid' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE vacation.id='".$i_id."'";
+    return Connection::query($request);
+
+}
+
