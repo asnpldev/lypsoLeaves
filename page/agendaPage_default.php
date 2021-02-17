@@ -57,17 +57,13 @@
                             <div class="grid grid-cols-12">
                                 <div class="col-span-6 p-2 mb-3">
 
-                                    <label for="first_name" class="block text-sm font-medium text-gray-700"> Date de
-                                        début<sup><i class="fas fa-asterisk text-blue-500 text-xs"></i></sup></span>
-                                    </label>
+                                    <label for="first_name" class="block text-sm font-medium text-gray-700"> Date de début</label>
                                     <input type="date" name="start" autocomplete="off"
                                            class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
                                 </div>
                                 <div class="col-span-6 p-2 border-r border-gray-300">
-                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Date de
-                                        fin<sup><i
-                                                    class="fas fa-asterisk text-blue-500 text-xs"></i></sup></label>
+                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Date de fin</label>
                                     <input type="date" name="end" autocomplete="off"
                                            class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
