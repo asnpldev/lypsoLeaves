@@ -38,42 +38,29 @@
         </div>
     </div>
 
-
-    <div class="grid grid-cols-12 border-t border-gray-200">
-        <div class="col-span-2">
-
-
-            <div class="p-2">
-                <div class="bg-gray-50 px-6 py-8 rounded-lg text-center">
-                    <div class="mb-3">
-                        <?php if ($datas['sx'] == "M") { ?>
-                            <img class="w-auto mx-auto rounded-full" src="../page/img/boy.svg" alt="">
-                        <?php } else { ?>
-                            <img class="w-auto mx-auto rounded-full" src="../page/img/girl.svg">
-                        <?php } ?>
-                    </div>
-                    <h2 class="text-xl font-medium text-gray-700"><?= ucfirst(strtolower($datas['firstname'])) . ' ' . ucfirst(strtolower($datas['lastname'])) ?></h2>
-                    <span class="text-gray-500 block mb-5"><?= $datas['nom'] ?></span>
-
-                    <a href="#" class="px-4 py-2 text-indigo-600 bg-indigo-100 rounded-full">Voir</a>
-                </div>
+    <div class="m-2 h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url('../page/img/snowbg.jpg')">
+        <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
+            <div class="px-10 max-w-xl">
+                <h2 class="text-2xl text-white font-semibold"><?= ucfirst(strtolower($datas['firstname'])) . ' ' . ucfirst(strtolower($datas['lastname'])) ?></h2>
+                <p class="mt-2 text-gray-400">Fait partit du pôle : <span class="text-gray-300 font-extrabold"><?= $datas['nom'] ?></span></p>
+                <a href="#" class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white transition duration-200 ease-in-out transform hover:translate-x-0.5  text-sm uppercase font-medium rounded hover:bg-blue-800 focus:outline-none focus:bg-blue-500">
+                    <span>Voir l'utilisateur</span>
+                    <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
             </div>
-
-
-
-
-
         </div>
-        <div class="col-span-10 p-2">
-            <div class="bg-gray-50">
+    </div>
 
 
 
 
 
 
-                    <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
-                        <div class="w-full lg:w-1/4">
+
+
+
+                    <div class="flex flex-col lg:flex-row w-full ">
+                        <div class="w-full lg:w-1/4 m-2 ">
                             <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
                                 <div class="flex flex-row items-center justify-between">
                                     <div class="flex flex-col">
@@ -88,7 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full lg:w-1/4 ">
+                        <div class="w-full lg:w-1/4 m-2 ">
                             <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
                                 <div class="flex flex-row items-center justify-between">
                                     <div class="flex flex-col">
@@ -103,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full lg:w-1/4 ">
+                        <div class="w-full lg:w-1/4 m-2 ">
                             <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
                                 <div class="flex flex-row items-center justify-between">
                                     <div class="flex flex-col">
@@ -127,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full lg:w-1/4">
+                        <div class="w-full lg:w-1/4 m-2 ">
                             <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
                                 <div class="flex flex-row items-center justify-between">
                                     <div class="flex flex-col">
@@ -135,7 +122,7 @@
                                             Demande validée par
                                         </div>
                                         <div class="text-xl font-bold">
-                                            <a href="#" class="text-indigo-600 ">usersio</a>
+                                            <a href="#" class="text-blue-600 "><?= $datas['hostname'] //TODO faire la modif sql de la personne qui à accepter la requete ?></a>
                                         </div>
                                     </div>
                                     <i class="far fa-check-circle text-xl text-gray-500"></i>
@@ -147,18 +134,6 @@
 
                 <br>
 
-                <div class="h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url('../page/img/snowbg.jpg')">
-                    <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
-                        <div class="px-10 max-w-xl">
-                            <h2 class="text-2xl text-white font-semibold">Sport Shoes</h2>
-                            <p class="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                            <button class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                                <span>Shop Now</span>
-                                <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
 
 
@@ -167,9 +142,7 @@
 
 
             </div>
-        </div>
 
-    </div>
 
 
 <?php
