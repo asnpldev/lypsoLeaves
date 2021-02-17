@@ -11,6 +11,7 @@ function managementControl($userAction)
                     $getId = $_GET['id'];
                     managementOverview_viewAction($getId);
 
+
                 }
             break;
         case 'filter':
@@ -22,7 +23,7 @@ function managementControl($userAction)
                     } else if(strlen($_POST['searchbar']) <= 0){
                         managementControl_MessageAction(2, 'Vous ne pouvez pas faire une recherche vide',0);
                     } else {
-                        $sb = $_POST['searchbar'];
+                        $sb = htmlspecialchars($_POST['searchbar']);
                         managementControl_searchAction($sb);
                     }
 
@@ -35,6 +36,7 @@ function managementControl($userAction)
             if (isset($_GET['id'])) {
                 $tempId = $_GET['id'];
                 managementData_AcceptRequest($tempId);
+                managementData_StoreManagerAcceptRequest($tempId, $_SESSION['user']->getId());
                 managementControl_MessageAction(0, "La demande #" . $tempId . " à bien été accepté !", $tempId);
             } else {
 
@@ -46,6 +48,7 @@ function managementControl($userAction)
             if (isset($_GET['id'])) {
                 $tempId = $_GET['id'];
                 managementData_DeclineRequest($tempId);
+                managementData_StoreManagerAcceptRequest($tempId, $_SESSION['user']->getId());
                 managementControl_MessageAction(0, "La demande #" . $tempId . " à bien été refusée!", $tempId);
             } else {
 
@@ -75,6 +78,7 @@ function managementOverview_viewAction($id){
 
     $tabTitle = "Absence #" . $id;
     $datas = managementData_overviewRequest($id);
+    $managerData = managementData_overviewManagerRequest($id);
     include('../page/managementPage_overview.php');
 }
 

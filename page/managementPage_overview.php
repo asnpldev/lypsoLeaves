@@ -38,111 +38,164 @@
         </div>
     </div>
 
-    <div class="m-2 h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url('../page/img/snowbg.jpg')">
+    <div class="m-2 h-64 rounded-md overflow-hidden bg-cover bg-center"
+         style="background-image: url('../page/img/snowbg.jpg')">
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
             <div class="px-10 max-w-xl">
-                <h2 class="text-2xl text-white font-semibold"><?= ucfirst(strtolower($datas['firstname'])) . ' ' . ucfirst(strtolower($datas['lastname'])) ?></h2>
-                <p class="mt-2 text-gray-400">Fait partit du pôle : <span class="text-gray-300 font-extrabold"><?= $datas['nom'] ?></span></p>
-                <a href="#" class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white transition duration-200 ease-in-out transform hover:translate-x-0.5  text-sm uppercase font-medium rounded hover:bg-blue-800 focus:outline-none focus:bg-blue-500">
-                    <span>Voir l'utilisateur</span>
-                    <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <h2 class="text-2xl text-white font-semibold"><?= ucfirst(strtolower($datas['firstname'])) . ' ' . ucfirst(strtolower($datas['lastname'])) ?>
+                    <sup><span class="fa-stack text-xs">
+                      <i class="fas fa-certificate fa-stack-2x text-blue-500"></i>
+                      <i class="far fa-check fa-stack-1x "></i>
+                    </span></sup>
+
+
+                </h2>
+                <p class="mt-2 text-gray-400 mb-4">Fait partit du pôle : <span
+                            class="text-gray-300 font-extrabold"><?= $datas['nom'] ?></span></p>
+                <a href="#"
+                   class="mt-3 items-center mt-4 px-3 py-2 bg-blue-600 text-white transition duration-200 ease-in-out text-sm uppercase font-medium rounded hover:bg-blue-800">
+                    Voir l'utilisateur
+                    <i class="fas fa-chevron-right pl-5"></i>
                 </a>
+
             </div>
         </div>
     </div>
 
 
-
-
-
-
-
-
-
-                    <div class="flex flex-col lg:flex-row w-full ">
-                        <div class="w-full lg:w-1/4 m-2 ">
-                            <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
-                                <div class="flex flex-row items-center justify-between">
-                                    <div class="flex flex-col">
-                                        <div class="text-xs uppercase font-light text-gray-500">
-                                            Date de début
-                                        </div>
-                                        <div class="text-xl font-bold">
-                                            <?= date('d/m/y', strtotime($datas['start'])) ?>
-                                        </div>
-                                    </div>
-                                    <i class="far fa-calendar-alt text-xl text-gray-500"></i>
-                                </div>
-                            </div>
+    <div class="flex flex-col lg:flex-row w-full ">
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Date de début
                         </div>
-                        <div class="w-full lg:w-1/4 m-2 ">
-                            <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
-                                <div class="flex flex-row items-center justify-between">
-                                    <div class="flex flex-col">
-                                        <div class="text-xs uppercase font-light text-gray-500">
-                                            Date de fin
-                                        </div>
-                                        <div class="text-xl font-bold">
-                                            <?= date('d/m/y', strtotime($datas['end'])) ?>
-                                        </div>
-                                    </div>
-                                    <i class="far fa-calendar-alt text-xl text-gray-500"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/4 m-2 ">
-                            <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
-                                <div class="flex flex-row items-center justify-between">
-                                    <div class="flex flex-col">
-                                        <div class="text-xs uppercase font-light text-gray-500">
-                                            Jours d'intervalle
-                                        </div>
-                                        <div class="text-xl font-bold">
-                                            <?php
-                                            $countStart = new DateTime($datas['start']);
-                                            $countEnd = new DateTime($datas['end']);
-                                            $countRowsDays = $countStart->diff($countEnd)->format('%a');
-                                            echo $countRowsDays;
-
-
-
-                                            ?>
-                                        </div>
-
-                                    </div>
-                                    <i class="far fa-clock text-xl text-gray-500"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/4 m-2 ">
-                            <div class="widget w-full p-4 rounded-lg bg-gray-50  dark:bg-gray-900 dark:border-gray-800">
-                                <div class="flex flex-row items-center justify-between">
-                                    <div class="flex flex-col">
-                                        <div class="text-xs uppercase font-light text-gray-500">
-                                            Demande validée par
-                                        </div>
-                                        <div class="text-xl font-bold">
-                                            <a href="#" class="text-blue-600 "><?= $datas['hostname'] //TODO faire la modif sql de la personne qui à accepter la requete ?></a>
-                                        </div>
-                                    </div>
-                                    <i class="far fa-check-circle text-xl text-gray-500"></i>
-                                </div>
-                            </div>
+                        <div class="text-xl font-bold">
+                            <?= date('d/m/y \<\s\m\a\l\l\>(H:i)\<\/\s\m\a\l\l\>', strtotime($datas['start'])) ?>
                         </div>
                     </div>
-
-
-                <br>
-
-
-
-
-
-
-
-
+                    <i class="far fa-calendar-alt text-xl text-gray-500"></i>
+                </div>
             </div>
+        </div>
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Date de fin
+                        </div>
+                        <div class="text-xl font-bold">
+                            <?= date('d/m/y \<\s\m\a\l\l\>(H:i)\<\/\s\m\a\l\l\>', strtotime($datas['end'])) ?>
+                        </div>
+                    </div>
+                    <i class="far fa-calendar-alt text-xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Intervalle
+                        </div>
+                        <div class="text-xl font-bold">
+                            <?php
 
+
+                            $datetime1 = new DateTime($datas['start']);
+                            $datetime2 = new DateTime($datas['end']);
+                            $interval = $datetime1->diff($datetime2);
+                            if((int)$interval->format('%a') <= 0){
+
+                                $countRowsDays = $interval->format('%hh%im ');
+
+                            } elseif((int)$interval->format('%H') <= 0 AND (int)$interval->format('%i') <= 0) {
+
+                                $countRowsDays = $interval->format('%a jours');
+
+                            } else {
+
+                                $countRowsDays = $interval->format('%a jours ->  %Hh%im ');
+
+                            }
+
+
+                            echo $countRowsDays;
+
+
+                            ?>
+                        </div>
+
+                    </div>
+                    <i class="far fa-clock text-xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Demande validée par
+                        </div>
+                        <div class="text-xl font-bold">
+                            <a href="?route=profile&userid=<?= $managerData['user_id'] ?>"
+                               class="text-blue-600 "><?php if ($managerData['id'] == $_SESSION['user']->getId()) {
+                                    echo '<small>' . $managerData['login'] . ' (Vous)</small>';
+                                } else {
+                                    echo $managerData['login'];
+                                } ?></a>
+                        </div>
+                    </div>
+                    <i class="far fa-check-circle text-xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex flex-col lg:flex-row w-full ">
+        <div class="w-full 1/2 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Raison de l'absence
+                        </div>
+                        <div class="text-xl font-bold">
+                           <?= $datas['reason']?>
+                        </div>
+                    </div>
+                    <i class="far fa-stream text-xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+        <div class="w-full 1/2 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            COMMENTAIRE (Facultatif)
+                        </div>
+                        <div class="text-xl font-bold">
+
+                            <?php if(empty($datas['comment'])){ echo 'Aucun commentaire'; } else { echo $datas['reason']; }?>
+                        </div>
+                    </div>
+                    <i class="far fa-comment-alt text-xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+
+    </div>
 
 
 <?php

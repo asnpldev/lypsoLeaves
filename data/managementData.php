@@ -30,12 +30,29 @@ function managementData_CancelRequest($i_id){
 
 
 
+function managementData_StoreManagerAcceptRequest($vacationId, $managerId){
+    $request="INSERT INTO operations VALUES(NULL, '".$vacationId."', '".$managerId."')";
+    $results=Connection::exec($request);
+    return $results;
+}
+
+
+
+
 function managementData_AcceptRequest($i_id){
     $request="UPDATE vacation SET status=1 WHERE id='".$i_id."'";
     return Connection::exec($request);
 
 
 }
+
+function managementData_overviewManagerRequest($i_id){
+
+    $request="SELECT * FROM operations JOIN user ON operations.user_id=user.id WHERE operations.vacation_id='".$i_id."'";
+    return Connection::query($request)[0];
+
+}
+
 
 
 function managementData_overviewRequest($i_id){

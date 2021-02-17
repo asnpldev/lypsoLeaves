@@ -157,10 +157,8 @@
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     SUJET
                                 </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Status
-                                </th>
+
+
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     Pôle
@@ -195,6 +193,7 @@
                                 foreach ($actualRequests as $actualRequest) {
 
 
+
                                     ?>
                                     <tr><!--class="hover:bg-gray-50"  -->
                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -222,20 +221,19 @@
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm text-gray-900">Demandes d'absence
+                                            <div class="text-sm text-gray-900"><?= $actualRequest['reason'] ?>
                                                 #<?= $actualRequest['vacid'] ?></div>
                                             <div class="text-sm text-gray-500">
-                                                Du <?php echo date('d/m/y', strtotime($actualRequest['start']))
+                                                Du <?php echo date('d/m/y H:i', strtotime($actualRequest['start']))
                                                 ?>
                                                 au
-                                                <?php echo date('d/m/y', strtotime($actualRequest['end'])) ?>
+                                                <?php echo date('d/m/y H:i', strtotime($actualRequest['end'])) ?>
+                                                <br>
+                                                <?php if(empty($actualRequest['comment'])){ echo 'Aucun commentaire...'; } else { echo $actualRequest['comment']; } ?>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-600">
-                  En attente
-                </span>
-                                        </td>
+
+
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             <?php echo $actualRequest['nom'] ?>
                                         </td>

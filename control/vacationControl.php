@@ -36,19 +36,38 @@ function vacationControl_defaultAction()
 function vacationControl_storeAction()
 {
 
-    $datas['start'] = $_POST['inputStartDate'];
-    $datas['end'] = $_POST['inputEndDate'];
 
-    $dbExec = vacation_storeAction($datas);
+    if (!empty($_POST['inputStartDate']) and !empty($_POST['inputEndDate']) and !empty($_POST['inputReason'])) {
 
-    if ($dbExec > 0) {
-        $message = "Votre demande d'absence à été envoyée avec succès.";
-        $type = 0;
+
+        if (strlen($_POST['inputComment']) > 50) {
+
+            $message = "Votre commentaire ne dois pas dépasser 50 caractères !";
+            $type = 1;
+
+        } else {
+
+            $datas['start'] = $_POST['inputStartDate'];
+            $datas['end'] = $_POST['inputEndDate'];
+            $datas['reason'] = $_POST['inputReason'];
+            $datas['comment'] = htmlspecialchars($_POST['inputComment']);
+
+            $dbExec = vacation_storeAction($datas);
+
+            if ($dbExec > 0) {
+                $message = "Votre demande d'absence à été envoyée avec succès.";
+                $type = 0;
+            } else {
+                $message = "Il y a un problème dans la demande d'absence, veuillez vérifier quelle soit bien valide !";
+                $type = 1;
+            }
+        }
     } else {
+
         $message = "Il y a un problème dans la demande d'absence, veuillez vérifier quelle soit bien valide !";
         $type = 1;
-    }
 
+    }
 
     $tabTitle = "Demandes d'absence";
     $vacationRequest = user_findVacations();
