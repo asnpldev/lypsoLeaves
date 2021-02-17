@@ -130,7 +130,7 @@
                                 class="fas fa-times-circle mr-0.5"></i></a><?= $filter ?></span>
             <?php } ?>
             <form action="?route=management&action=filter" METHOD="post" class="float-right">
-                <input type="search" placeholder="Rechercher" name="searchbar"
+                <input type="search" autocomplete="off" placeholder="Rechercher" name="searchbar"
                        class="px-2.5  h-6 border-gray-300 border rounded bg-gray-100 focus:border-transparent">
                 <input type="submit" value="Chercher" class="rounded px-2 py-0.5 text-xs cursor-pointer">
             </form>

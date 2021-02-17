@@ -73,7 +73,7 @@ function managementControl($userAction)
 
 function managementOverview_viewAction($id){
 
-
+    $tabTitle = "Absence #" . $id;
     $datas = managementData_overviewRequest($id);
     include('../page/managementPage_overview.php');
 }

@@ -100,7 +100,7 @@
                                     <div class="col-span-3">
                                         <label for="last_name" class="block text-sm font-medium text-gray-700">Date de
                                             fin</label>
-                                        <input type="date" name="inputEndDate" autocomplete="family-name"
+                                        <input type="datetime-local" name="inputEndDate" autocomplete="family-name"
                                                class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
                                     </div>
