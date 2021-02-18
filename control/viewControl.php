@@ -4,7 +4,7 @@ function viewControl($userAction)
 {
     switch ($userAction) {
         case 'overview':
-            if ($_SESSION['user']->getPermPower() >= MANAGEMENT_OVERVIEW) {
+            if ($_SESSION['user']->getPermPower() >= VIEW_PAGE) {
                 if (isset($_GET['id'])) {
 
                     $getId = $_GET['id'];

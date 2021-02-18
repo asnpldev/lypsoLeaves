@@ -76,7 +76,9 @@ switch ($route) {
 
         break;
     case 'view':
-        viewControl($action);
+        if ($_SESSION['user']->getPermPower() >= VIEW_PAGE) {
+            viewControl($action);
+        } else {header('location:.?route=dashboard'); }
         break;
 
     case 'authenticate':

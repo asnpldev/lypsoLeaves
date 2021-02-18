@@ -6,11 +6,18 @@
 
             <div class="col-span-6">
                 <?php if ($_SESSION['user']->getPermPower() >= DASHBOARD_AGENDA_OVERVIEW) { ?>
-                    <?php if (isset($actualConges[0])) { //SI LA PERSONNE EST EN CONGES
+                    <?php
 
-                        $absenceStart = new DateTime(date('Y-m-d'));
-                        $absenceEnd = new DateTime($actualConges[0]['end']);
-                        $days = $absenceStart->diff($absenceEnd)->format('%a');
+
+
+
+                    if (isset($actualConges[0])) { //SI LA PERSONNE EST EN CONGES
+
+
+                        $first_date = new DateTime(date('Y-m-d H:i:s'));
+                        $second_date = new DateTime($actualConges[0]['end']);
+                        $interval = $first_date->diff($second_date);
+                        $days= $interval->format('%d jour(s) et %Hh%Im ');
 
 
                         ?>
@@ -23,9 +30,9 @@
                             <div class="col-span-8">
                                 <h4 class="font-semibold text-white text-xl">Vous êtes actuellement en absence</h4>
                                 <p class="text-white">Le début de votre absence est
-                                    du <?= date('d/m/y', strtotime($actualConges[0]['start'])) ?>
-                                    jusqu'au <?= date('d/m/y', strtotime($actualConges[0]['end'])) ?>, il vous reste
-                                    encore <?= $days ?> jour(s) d'absence(s)</p>
+                                    du <?= date('d/m/Y', strtotime($actualConges[0]['start'])) ?>
+                                    jusqu'au <?= date('d/m/Y', strtotime($actualConges[0]['end'])) ?>, il vous reste
+                                    encore <?= $days ?></p>
                             </div>
 
 

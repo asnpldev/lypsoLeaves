@@ -8,7 +8,7 @@
 function actualConges()
 {
 
-     $request = "SELECT * FROM vacation WHERE (DATE(NOW()) >= start AND DATE(NOW()) <= end) AND user_id='".$_SESSION['user']->getId()."' AND status=1";
+     $request = "SELECT * FROM vacation WHERE ((NOW()) >= start AND (NOW()) <= end) AND user_id='".$_SESSION['user']->getId()."' AND status=1";
     return Connection::query($request);
 }
 
