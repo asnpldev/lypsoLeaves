@@ -14,6 +14,9 @@ include('../data/checkDayData.php');
 include('../data/adminData.php');
 include('../data/pendingData.php');
 
+//PERMISSION SYSTEM
+include('../permissions/config.php');
+
 
 //CLASS
 include('../data/User.php');
@@ -27,7 +30,8 @@ include('../control/managementControl.php');
 include('../control/agendaControl.php');
 include('../control/404Control.php');
 include('../control/adminControl.php');
-include('../control/maintenanceControl.php');
+include('../control/viewControl.php');
+
 
 session_start();
 
@@ -49,44 +53,43 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-//function checkMaintenance()
-//{
-//
-//
-//    $request = "SELECT * FROM test";
-//    return Connection::query($request)[0];
-//}
-//
-//$testdb = checkMaintenance();
-//
-//if ($testdb['maintenance'] == 1) {
-//
-//    echo "noo";
-//
-//} else {
-
-
 switch ($route) {
     case 'dashboard':
         dashboardControl($action);
         break;
     case 'management':
-        managementControl($action);
+        if ($_SESSION['user']->getPermPower() >= MANAGEMENT_PAGE) {
+            managementControl($action);
+        } else { header('location:.?route=dashboard'); }
+
         break;
     case 'vacation':
-        vacationControl($action);
+        if ($_SESSION['user']->getPermPower() >= VACATION_PAGE) {
+            vacationControl($action);
+        } else {header('location:.?route=dashboard'); }
+
         break;
     case 'agenda':
-        agendaControl($action);
+        if ($_SESSION['user']->getPermPower() >= AGENDA_PAGE) {
+            agendaControl($action);
+        } else { header('location:.?route=dashboard'); }
+
         break;
+    case 'view':
+        if ($_SESSION['user']->getPermPower() >= VIEW_PAGE) {
+            viewControl($action);
+        } else {header('location:.?route=dashboard'); }
+        break;
+
     case 'authenticate':
         authenticateControl($action);
         break;
-    case 'maintenance':
-        maintenanceControl($action);
-        break;
+
     case 'admin':
-        adminControl($action);
+        if ($_SESSION['user']->getPermPower() >= ADMIN_PAGE) {
+            adminControl($action);
+        } else { header('location:.?route=dashboard'); }
+
         break;
     default:
         ErrorExpControl($action);

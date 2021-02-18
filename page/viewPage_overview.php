@@ -57,7 +57,14 @@
                    class="mt-3 items-center mt-4 px-3 py-2 bg-blue-600 text-white transition duration-200 ease-in-out text-sm uppercase font-medium rounded hover:bg-blue-800">
                     Voir l'utilisateur
                     <i class="fas fa-chevron-right pl-5"></i>
-                </a><?php if (date('y-m-d') > date('y-m-d', strtotime($datas['end']))) { ?>
+
+                </a><?php
+                $date1 = new DateTime("now");
+                $date2 = new DateTime($datas['end']);
+                $interval = $date2->diff($date2);
+
+
+                if ($date1 > $date2) { ?>
                     <br><br><p class="mt-2 text-red-500 bg-red-900 bg-opacity-50 shadow px-2 py-0.5 rounded-full mb-4">
                         <i class="far fa-exclamation-circle"></i> <?= 'Cette absence est obselète car la date de fin est dépassée !'; ?>
                     </p>
@@ -211,13 +218,6 @@
 
 
     </div>
-
-
-<?php
-
-
-//var_dump($datas);
-?>
 
 
 <?php include('template/footer.php') ?>
