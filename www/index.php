@@ -15,7 +15,6 @@ include('../data/adminData.php');
 include('../data/pendingData.php');
 
 //PERMISSION SYSTEM
-include('../permissions/permissionsChecker.php');
 include('../permissions/config.php');
 
 
@@ -31,7 +30,7 @@ include('../control/managementControl.php');
 include('../control/agendaControl.php');
 include('../control/404Control.php');
 include('../control/adminControl.php');
-include('../control/maintenanceControl.php');
+
 
 session_start();
 
@@ -58,27 +57,32 @@ switch ($route) {
         dashboardControl($action);
         break;
     case 'management':
-        managementControl($action);
+        if ($_SESSION['user']->getPermPower() >= MANAGEMENT_PAGE) {
+            managementControl($action);
+        } else { header('location:.?route=dashboard'); }
+
         break;
     case 'vacation':
-        vacationControl($action);
+        if ($_SESSION['user']->getPermPower() >= VACATION_PAGE) {
+            vacationControl($action);
+        } else {header('location:.?route=dashboard'); }
+
         break;
     case 'agenda':
-        if ($_SESSION['user']->getPermPower() >= AGENDA_VIEW) {
+        if ($_SESSION['user']->getPermPower() >= AGENDA_PAGE) {
             agendaControl($action);
-        } else {
-            header('location:.?route=dashboard');
-        }
+        } else { header('location:.?route=dashboard'); }
 
         break;
     case 'authenticate':
         authenticateControl($action);
         break;
-    case 'maintenance':
-        maintenanceControl($action);
-        break;
+
     case 'admin':
-        adminControl($action);
+        if ($_SESSION['user']->getPermPower() >= ADMIN_PAGE) {
+            adminControl($action);
+        } else { header('location:.?route=dashboard'); }
+
         break;
     default:
         ErrorExpControl($action);

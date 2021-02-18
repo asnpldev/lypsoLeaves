@@ -15,10 +15,7 @@
                 ACCUEIL
             </a>
 
-            <a href="?route=dashboard" class="w-full text-sm /// bg-red-200 /// text-gray-800 py-2 inline-block text-left">
-                <span class="text-xl p-2.5 font-extrabold">#</span>
-                TICKETS
-            </a>
+
 
 
 
