@@ -15,6 +15,9 @@ define('AGENDA_PAGE', '0x02');
 //  MANAGEMENT
 //
 define('MANAGEMENT_PAGE', '0x02');
+define('MANAGEMENT_MANAGE', '0x02');
+define('MANAGEMENT_OVERVIEW', '0x01');
+
 
 //
 //  RESERVATIONS
