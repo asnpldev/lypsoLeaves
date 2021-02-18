@@ -4,20 +4,7 @@
 function managementControl($userAction)
 {
     switch ($userAction) {
-        case 'overview':
-            if ($_SESSION['user']->getPermPower() >= MANAGEMENT_OVERVIEW) {
-                if (isset($_GET['id'])) {
 
-                    $getId = $_GET['id'];
-                    managementOverview_viewAction($getId);
-
-
-                }
-            } else {
-                managementControl_MessageActionDefault(2, "Erreur, vous n'avez pas la permission de visiter la page d'agenda!");
-
-            }
-            break;
         case 'filter':
             if (isset($_POST['searchbar'])) {
 
@@ -98,7 +85,7 @@ function managementOverview_viewAction($id)
     $tabTitle = "Absence #" . $id;
     $datas = managementData_overviewRequest($id);
     $managerData = managementData_overviewManagerRequest($id);
-    include('../page/managementPage_overview.php');
+    include('../page/viewPage_overview.php');
 }
 
 function managementControl_MessageActionDefault(int $id, string $content)

@@ -12,7 +12,7 @@
 
             <a href="?route=dashboard" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
                 <span class="text-xl p-2.5 font-extrabold">#</span>
-                ACCUEIL
+                Accueil
             </a>
 
 

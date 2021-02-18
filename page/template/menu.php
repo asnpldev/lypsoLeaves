@@ -50,7 +50,7 @@ $temp = $_GET['route'];
                 <?php } ?>
 
 
-                <?php if ($_SESSION['user']->getAdmin() == 1) { ?>
+                <?php if ($_SESSION['user']->getPermPower() >= ADMIN_PAGE   ) { ?>
 
                     <div class="my-12">
                         <hr class="border-gray-300 ml-6 w-1/6">

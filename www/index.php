@@ -30,6 +30,7 @@ include('../control/managementControl.php');
 include('../control/agendaControl.php');
 include('../control/404Control.php');
 include('../control/adminControl.php');
+include('../control/viewControl.php');
 
 
 session_start();
@@ -74,6 +75,10 @@ switch ($route) {
         } else { header('location:.?route=dashboard'); }
 
         break;
+    case 'view':
+        viewControl($action);
+        break;
+
     case 'authenticate':
         authenticateControl($action);
         break;

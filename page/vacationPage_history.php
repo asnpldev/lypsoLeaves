@@ -151,7 +151,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
 
-                                        <a href="?route=management&action=overview&id=<?= $vacationHistoryRequests['vacid'] ?>"
+                                        <a href="?route=view&action=overview&id=<?= $vacationHistoryRequests['vacid'] ?>"
                                            class="text-indigo-600 hover:text-indigo-900">Voir</a>
                                     </td>
 

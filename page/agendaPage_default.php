@@ -171,7 +171,7 @@ if (isset($_POST['start']) and isset($_POST['end']) and isset($intDays)) { ?>
                     <div class="col-span-3">
 
                         <div class="bg-blue-50 rounded p-7 text-gray-700 transform transition duration-200 hover:scale-105 hover:bg-blue-100">
-                            <a href="?route=management&action=overview&id=<?= $checkingActualVacation['vacation_id'] ?>"
+                            <a href="?route=view&action=overview&id=<?= $checkingActualVacation['vacation_id'] ?>"
                                class="p-8">
 
                                 <i class="fas fa-calendar-day text-2xl text-gray-500 mr-1 float-left"></i>
