@@ -58,7 +58,9 @@
                     Voir l'utilisateur
                     <i class="fas fa-chevron-right pl-5"></i>
                 </a><?php if (date('y-m-d') > date('y-m-d', strtotime($datas['end']))) { ?>
-                    <br><br><p class="mt-2 text-red-500 bg-red-900 bg-opacity-50 shadow px-2 py-0.5 rounded-full mb-4"><i class="far fa-exclamation-circle"></i> <?= 'Cette absence est obselète car la date de fin est dépassée !'; ?></p>
+                    <br><br><p class="mt-2 text-red-500 bg-red-900 bg-opacity-50 shadow px-2 py-0.5 rounded-full mb-4">
+                        <i class="far fa-exclamation-circle"></i> <?= 'Cette absence est obselète car la date de fin est dépassée !'; ?>
+                    </p>
                 <?php } ?>
 
             </div>

@@ -50,80 +50,81 @@
 
         <div class="overflow-hidden sm:rounded-md">
 
-                <div class="grid grid-cols-12">
+            <div class="grid grid-cols-12">
 
-                        <div class="col-span-6">
-                            <form role="form" method="POST" action="?route=agenda&action=checkvacation">
-                            <div class="grid grid-cols-12">
-                                <div class="col-span-6 p-2 mb-3">
+                <div class="col-span-6">
+                    <form role="form" method="POST" action="?route=agenda&action=checkvacation">
+                        <div class="grid grid-cols-12">
+                            <div class="col-span-6 p-2 mb-3">
 
-                                    <label for="first_name" class="block text-sm font-medium text-gray-700"> Date de début</label>
-                                    <input type="date" name="start" autocomplete="off"
-                                           class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+                                <label for="first_name" class="block text-sm font-medium text-gray-700"> Date de
+                                    début</label>
+                                <input type="date" name="start" autocomplete="off"
+                                       class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
-                                </div>
-                                <div class="col-span-6 p-2 border-r border-gray-300">
-                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Date de fin</label>
-                                    <input type="date" name="end" autocomplete="off"
-                                           class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+                            </div>
+                            <div class="col-span-6 p-2 border-r border-gray-300">
+                                <label for="last_name" class="block text-sm font-medium text-gray-700">Date de
+                                    fin</label>
+                                <input type="date" name="end" autocomplete="off"
+                                       class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
-                                </div>
+                            </div>
 
 
-                                <div class="col-span-12 border-r border-gray-300">
-                                    <div class="px-4 py-3 bg-gray-100 text-right">
-                                        <button type="submit"
-                                                class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                            Confirmer
-                                        </button>
-                                    </div>
+                            <div class="col-span-12 border-r border-gray-300">
+                                <div class="px-4 py-3 bg-gray-100 text-right">
+                                    <button type="submit"
+                                            class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Confirmer
+                                    </button>
                                 </div>
                             </div>
-                            </form>
                         </div>
-                        <div class="col-span-6">
-                            <form role="form" method="POST" action="?route=agenda&action=checkvacation">
-                                <div class="grid grid-cols-12 gap-3">
-                                    <div class="col-span-6 p-2">
+                    </form>
+                </div>
+                <div class="col-span-6">
+                    <form role="form" method="POST" action="?route=agenda&action=checkvacation">
+                        <div class="grid grid-cols-12 gap-3">
+                            <div class="col-span-6 p-2">
 
-                                        <label for="first_name" class="block text-sm font-medium text-gray-700"> Rechercher (OFF)</span>
-                                        </label>
-                                        <input type="text" placeholder="Exemple: Sebastien" name="searchAgenda" autocomplete="off"
-                                               class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+                                <label for="first_name" class="block text-sm font-medium text-gray-700"> Rechercher
+                                    (OFF)</span>
+                                </label>
+                                <input type="text" placeholder="Exemple: Sebastien" name="searchAgenda"
+                                       autocomplete="off"
+                                       class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
-                                    </div>
-<!--                                    <div class="col-span-6  p-2">-->
-<!--                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Date de-->
-<!--                                            fin<sup><i-->
-<!--                                                        class="fas fa-asterisk text-blue-500 text-xs"></i></sup></label>-->
-<!--                                        <input type="date" name="end" autocomplete="family-name"-->
-<!--                                               class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">-->
-<!---->
-<!--                                    </div>-->
+                            </div>
+                            <!--                                    <div class="col-span-6  p-2">-->
+                            <!--                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Date de-->
+                            <!--                                            fin<sup><i-->
+                            <!--                                                        class="fas fa-asterisk text-blue-500 text-xs"></i></sup></label>-->
+                            <!--                                        <input type="date" name="end" autocomplete="family-name"-->
+                            <!--                                               class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">-->
+                            <!---->
+                            <!--                                    </div>-->
 
 
-                                    <div class="col-span-12">
-                                        <div class="px-4 py-3 bg-gray-100 text-right">
-                                            <button type="submit"
-                                                    class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                                Chercher
-                                            </button>
-                                        </div>
-                                    </div>
+                            <div class="col-span-12">
+                                <div class="px-4 py-3 bg-gray-100 text-right">
+                                    <button type="submit"
+                                            class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Chercher
+                                    </button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-
-
-
+                    </form>
                 </div>
 
-            </div>
 
+            </div>
 
         </div>
 
 
+    </div>
 
 
 <?php
