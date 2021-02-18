@@ -196,7 +196,7 @@
                             <?php if (empty($datas['comment'])) {
                                 echo 'Aucun commentaire';
                             } else {
-                                echo $datas['reason'];
+                                echo $datas['comment'];
                             } ?>
                         </div>
                     </div>
