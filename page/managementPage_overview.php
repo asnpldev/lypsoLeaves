@@ -50,13 +50,16 @@
 
 
                 </h2>
+
                 <p class="mt-2 text-gray-400 mb-4">Fait partit du pôle : <span
                             class="text-gray-300 font-extrabold"><?= $datas['nom'] ?></span></p>
-                <a href="#"
+                <a href="?route=profile&userid=<?= $datas['user_id'] ?>"
                    class="mt-3 items-center mt-4 px-3 py-2 bg-blue-600 text-white transition duration-200 ease-in-out text-sm uppercase font-medium rounded hover:bg-blue-800">
                     Voir l'utilisateur
                     <i class="fas fa-chevron-right pl-5"></i>
-                </a>
+                </a><?php if (date('y-m-d') > date('y-m-d', strtotime($datas['end']))) { ?>
+                    <br><br><p class="mt-2 text-red-500 bg-red-900 bg-opacity-50 shadow px-2 py-0.5 rounded-full mb-4"><i class="far fa-exclamation-circle"></i> <?= 'Cette absence est obselète car la date de fin est dépassée !'; ?></p>
+                <?php } ?>
 
             </div>
         </div>
@@ -64,100 +67,102 @@
 
 
     <div class="flex flex-col lg:flex-row w-full ">
-    <div class="w-full lg:w-1/4 m-2 ">
-        <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
-            <div class="flex flex-row items-center justify-between">
-                <div class="flex flex-col">
-                    <div class="text-xs uppercase font-light text-gray-500">
-                        Date de début
+
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Date de début
+                        </div>
+                        <div class="text-xl font-bold">
+                            <?= date('d/m/y \<\s\m\a\l\l\>(H:i)\<\/\s\m\a\l\l\>', strtotime($datas['start'])) ?>
+                        </div>
                     </div>
-                    <div class="text-xl font-bold">
-                        <?= date('d/m/y \<\s\m\a\l\l\>(H:i)\<\/\s\m\a\l\l\>', strtotime($datas['start'])) ?>
-                    </div>
+                    <i class="far fa-calendar-alt text-xl text-gray-500"></i>
                 </div>
-                <i class="far fa-calendar-alt text-xl text-gray-500"></i>
             </div>
         </div>
-    </div>
-    <div class="w-full lg:w-1/4 m-2 ">
-        <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
-            <div class="flex flex-row items-center justify-between">
-                <div class="flex flex-col">
-                    <div class="text-xs uppercase font-light text-gray-500">
-                        Date de fin
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Date de fin
+                        </div>
+                        <div class="text-xl font-bold">
+                            <?= date('d/m/y \<\s\m\a\l\l\>(H:i)\<\/\s\m\a\l\l\>', strtotime($datas['end'])) ?>
+                        </div>
                     </div>
-                    <div class="text-xl font-bold">
-                        <?= date('d/m/y \<\s\m\a\l\l\>(H:i)\<\/\s\m\a\l\l\>', strtotime($datas['end'])) ?>
-                    </div>
+                    <i class="far fa-calendar-alt text-xl text-gray-500"></i>
                 </div>
-                <i class="far fa-calendar-alt text-xl text-gray-500"></i>
             </div>
         </div>
-    </div>
-    <div class="w-full lg:w-1/4 m-2 ">
-        <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
-            <div class="flex flex-row items-center justify-between">
-                <div class="flex flex-col">
-                    <div class="text-xs uppercase font-light text-gray-500">
-                        Intervalle
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Intervalle
+                        </div>
+                        <div class="text-xl font-bold">
+                            <?php
+
+
+                            $datetime1 = new DateTime($datas['start']);
+                            $datetime2 = new DateTime($datas['end']);
+                            $interval = $datetime1->diff($datetime2);
+                            if ((int)$interval->format('%a') <= 0) {
+
+                                $countRowsDays = $interval->format('%hh%im ');
+
+                            } elseif ((int)$interval->format('%H') <= 0 and (int)$interval->format('%i') <= 0) {
+
+                                $countRowsDays = $interval->format('%a jours');
+
+                            } else {
+
+                                $countRowsDays = $interval->format('%a jours ->  %Hh%im ');
+
+                            }
+
+
+                            echo $countRowsDays;
+
+
+                            ?>
+                        </div>
+
                     </div>
-                    <div class="text-xl font-bold">
-                        <?php
-
-
-                        $datetime1 = new DateTime($datas['start']);
-                        $datetime2 = new DateTime($datas['end']);
-                        $interval = $datetime1->diff($datetime2);
-                        if ((int)$interval->format('%a') <= 0) {
-
-                            $countRowsDays = $interval->format('%hh%im ');
-
-                        } elseif ((int)$interval->format('%H') <= 0 and (int)$interval->format('%i') <= 0) {
-
-                            $countRowsDays = $interval->format('%a jours');
-
-                        } else {
-
-                            $countRowsDays = $interval->format('%a jours ->  %Hh%im ');
-
-                        }
-
-
-                        echo $countRowsDays;
-
-
-                        ?>
-                    </div>
-
+                    <i class="far fa-clock text-xl text-gray-500"></i>
                 </div>
-                <i class="far fa-clock text-xl text-gray-500"></i>
             </div>
         </div>
-    </div>
-    <div class="w-full lg:w-1/4 m-2 ">
-    <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
-    <div class="flex flex-row items-center justify-between">
-    <div class="flex flex-col">
-    <div class="text-xs uppercase font-light text-gray-500">
-        Demande validée par
-    </div>
-    <div class="text-xl font-bold">
-    <a href="?route=profile&userid=<?= $managerData['user_id'] ?>"
-       class="text-blue-600 ">
-        <?php if (!isset($managerData['id'])) {
-                    echo '<span class="text-black">Opérateur inconnu</span>';
-        } else {
-    if ($managerData['id'] == $_SESSION['user']->getId()) {
-        echo '<small>' . $managerData['login'] . ' (Vous)</small>';
-    } else {
-        echo $managerData['login'];
-    } }?></a>
-    </div>
-    </div>
-    <i class="far fa-check-circle text-xl text-gray-500"></i>
-    </div>
-    </div>
-    </div>
+        <div class="w-full lg:w-1/4 m-2 ">
+            <div class="widget w-full p-4 rounded-lg bg-gray-100  dark:bg-gray-900 dark:border-gray-800">
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-xs uppercase font-light text-gray-500">
+                            Demande validée par
+                        </div>
+                        <div class="text-xl font-bold">
+                            <a href="?route=profile&userid=<?= $managerData['user_id'] ?>"
+                               class="text-blue-600 ">
+                                <?php if (!isset($managerData['id'])) {
+                                    echo '<span class="text-black">Opérateur inconnu</span>';
+                                } else {
+                                    if ($managerData['id'] == $_SESSION['user']->getId()) {
+                                        echo '<small>' . $managerData['login'] . ' (Vous)</small>';
+                                    } else {
+                                        echo $managerData['login'];
+                                    }
+                                } ?></a>
+                        </div>
+                    </div>
+                    <i class="far fa-check-circle text-xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -206,11 +211,11 @@
     </div>
 
 
-    <?php
+<?php
 
 
 //var_dump($datas);
-    ?>
+?>
 
 
-    <?php include('template/footer.php') ?>
+<?php include('template/footer.php') ?>

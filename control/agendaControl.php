@@ -13,7 +13,7 @@ function agendaControl($userAction)
 
 function agendaControl_defaultAction()
 {
-    $tabTitle = "null";
+    $tabTitle = "Agenda";
 
 
     $message = "";
