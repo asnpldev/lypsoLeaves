@@ -77,7 +77,10 @@
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                            <?php if (empty($vacationRequest)) { ?>
+                            <?php
+
+                            //Si il n'y à pas de demandes en attente
+                            if (empty($vacationRequest)) { ?>
 
 
                             <tr>
@@ -94,7 +97,7 @@
                             </tr>
 
                             <?php } else {
-
+                            //Sinon
                             foreach ($vacationRequest as $vacationRequests) {?>
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">

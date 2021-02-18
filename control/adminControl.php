@@ -2,6 +2,9 @@
 
 function adminControl($userAction){
     switch ($userAction){
+        case 'newuser':
+            adminControl_newUserAction();
+            break;
         case 'users':
             adminControl_userAction();
             break;
@@ -11,6 +14,15 @@ function adminControl($userAction){
         break;
     }
 }
+
+
+function adminControl_newUserAction()
+{
+    $tabTitle="Nouvel utilisateur";
+    include('../page/adminPage_newuser.php');
+}
+
+
 
 function adminControl_userAction()
 {

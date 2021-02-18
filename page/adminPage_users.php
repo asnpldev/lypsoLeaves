@@ -56,7 +56,7 @@
     <div class="bg-gray-50 border-t border-gray-200">
         <div class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             ACTIONS
-            <a href="#" class="ml-3 text-purple-600 bg-purple-100 px-2 py-0.5 text-xs rounded-full"><i class="far fa-user-plus mr-1"></i>Créer un utilisateur</a>
+            <a href="?route=admin&action=newuser" class="ml-3 text-purple-600 bg-purple-100 px-2 py-0.5 text-xs rounded-full"><i class="far fa-user-plus mr-1"></i>Créer un utilisateur</a>
             <a href="#" class="ml-3 text-purple-600 bg-purple-100 px-2 py-0.5 text-xs rounded-full"><i class="far fa-server mr-1"></i>Gérer les accès administrateur</a>
 
         </div>
