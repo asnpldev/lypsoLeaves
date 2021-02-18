@@ -46,11 +46,14 @@ function authenticateControl_loginAction($login,$password)
 
 
 
-            $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], $user['active'], $user['sx'], $user['admin']);
+
+
+            $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], SQL_initUserPermission($user['id']), $user['active'], $user['sx'], $user['admin']);
 
 
             //$_SESSION['user']=$user;
             header('location:./?route=dashboard');
+
 
         }
         else{

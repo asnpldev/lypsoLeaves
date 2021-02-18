@@ -14,6 +14,10 @@ include('../data/checkDayData.php');
 include('../data/adminData.php');
 include('../data/pendingData.php');
 
+//PERMISSION SYSTEM
+include('../permissions/permissionsChecker.php');
+include('../permissions/config.php');
+
 
 //CLASS
 include('../data/User.php');
@@ -49,23 +53,6 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-//function checkMaintenance()
-//{
-//
-//
-//    $request = "SELECT * FROM test";
-//    return Connection::query($request)[0];
-//}
-//
-//$testdb = checkMaintenance();
-//
-//if ($testdb['maintenance'] == 1) {
-//
-//    echo "noo";
-//
-//} else {
-
-
 switch ($route) {
     case 'dashboard':
         dashboardControl($action);
@@ -77,7 +64,12 @@ switch ($route) {
         vacationControl($action);
         break;
     case 'agenda':
-        agendaControl($action);
+        if ($_SESSION['user']->getPermPower() >= AGENDA_VIEW) {
+            agendaControl($action);
+        } else {
+            header('location:.?route=dashboard');
+        }
+
         break;
     case 'authenticate':
         authenticateControl($action);
