@@ -46,9 +46,6 @@ function vacationControl_storeAction()
 
         if ((int)$startTime <= (int)$endTime) {
 
-
-
-
             if (strlen($_POST['inputComment']) > 50) {
 
                 $message = "Votre commentaire ne dois pas dépasser 50 caractères !";
