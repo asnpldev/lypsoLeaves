@@ -9,15 +9,13 @@
                     <?php
 
 
-
-
                     if (isset($actualConges[0])) { //SI LA PERSONNE EST EN CONGES
 
 
                         $first_date = new DateTime(date('Y-m-d H:i:s'));
                         $second_date = new DateTime($actualConges[0]['end']);
                         $interval = $first_date->diff($second_date);
-                        $days= $interval->format('%d jour(s) et %Hh%Im ');
+                        $days = $interval->format('%d jour(s) et %Hh%Im ');
 
 
                         ?>
