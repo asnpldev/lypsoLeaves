@@ -22,7 +22,7 @@
             </a>
             <a href="?route=vacation&action=history" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
                 <span class="text-xl p-2.5 font-extrabold">#</span>
-                HISTORIQUE    <span class="bg-red-300 text-red-800 px-2.5 py-0.5 rounded-full">THOMAS ICI TA PARTIE </span>
+                HISTORIQUE <i class="fas fa-check-circle text-green-700"></i>
             </a>
 
 
