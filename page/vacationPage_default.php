@@ -92,7 +92,7 @@
                                     <div class="col-span-3">
 
                                         <label for="first_name" class="block text-sm font-medium text-gray-700">Date de
-                                            début</span></label>
+                                            début</label>
                                         <input type="datetime-local" name="inputStartDate" autocomplete="given-name"
                                                class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
@@ -105,9 +105,9 @@
 
                                     </div>
                                     <div class="col-span-3">
-                                        <label for="last_name"
+                                        <label for="reason"
                                                class="block text-sm font-medium text-gray-700">Raison</label>
-                                        <select type="date" name="inputReason"
+                                        <select name="inputReason"
                                                 class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
                                             <option value="">--SELECTIONNEZ--</option>
                                             <option>[CA] Congés annuels</option>

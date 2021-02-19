@@ -28,7 +28,8 @@
 
             </nav>
             </small>
-            </p>  </div>
+            </p>
+        </div>
     </div>
 
     <div class="bg-gray-50 border-t border-gray-200">
