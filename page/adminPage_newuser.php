@@ -62,7 +62,7 @@
                 </div>
 
                 <div>
-                    <label for="department">Pôle</label>
+                    <label for="department">Pôle :</label>
                     <select name="inputDepartment">
                         <option value="">--SELECTIONNEZ--</option>
                         <option>Direction</option>
@@ -73,6 +73,26 @@
                         <option>Système d'information</option>
                         <option>Ressources Humaines</option>
                     </select>
+                </div>
+
+                <div>
+                    <label for="department">Permission :</label>
+                    <select name="inputDepartment">
+                        <option value="">--SELECTIONNEZ--</option>
+                        <option>Salaire</option>
+                        <option>Ressources Humaines</option>
+                        <option>Direction Ressources Humaines</option>
+                        <option>Directeur</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sex">Sexe :</label>
+                    <select name="inputSex">
+                        <option value="">--SELECTIONNEZ--</option>
+                        <option>Femme</option>
+                        <option>Homme</option>
+                        <option>Non identifié</option>
                 </div>
 
             </form>
