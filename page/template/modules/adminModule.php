@@ -14,7 +14,7 @@
 
             <a href="?route=admin" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
                 <span class="text-xl p-2.5 font-extrabold">#</span>
-                ACCUEIL
+                Accueil
             </a>
 
         </p>
@@ -25,16 +25,16 @@
         <p class="mt-1 max-w-2xl text-sm font-regular text-gray-500">
             <a href="?route=admin&action=users" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
                 <span class="text-xl p-2.5 font-extrabold">#</span>
-                UTILISATEURS
+                Utilisateurs
             </a>
-            <a href="?route=admin&action=roles" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
-                <span class="text-xl p-2.5 font-extrabold">#</span>
-                ROLES
-            </a>
-            <a href="?route=admin&action=permissions" class="w-full text-sm text-gray-800 py-2 inline-block text-left">
-                <span class="text-xl p-2.5 font-extrabold">#</span>
-                PERMISSIONS (user)
-            </a>
+<!--            <a href="?route=admin&action=roles" class="w-full text-sm text-gray-800 py-2 inline-block text-left">-->
+<!--                <span class="text-xl p-2.5 font-extrabold">#</span>-->
+<!--                ROLES-->
+<!--            </a>-->
+<!--            <a href="?route=admin&action=permissions" class="w-full text-sm text-gray-800 py-2 inline-block text-left">-->
+<!--                <span class="text-xl p-2.5 font-extrabold">#</span>-->
+<!--                PERMISSIONS-->
+<!--            </a>-->
 
 
         </p>

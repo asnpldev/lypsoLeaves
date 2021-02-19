@@ -31,7 +31,7 @@
                             </svg>
                         </li>
                         <li>
-                            <span class="text-gray-500" aria-current="page">Demandes en attentes</span>
+                            <span class="text-gray-500" aria-current="page">Historique de vos demandes</span>
                         </li>
                     </ol>
                 </nav>
@@ -41,8 +41,8 @@
         </div>
 
         <div class="flex flex-col">
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-x-auto ">
+                <div class="align-middle inline-block min-w-full">
                     <div class=" overflow-hidden border-b border-gray-200">
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">
@@ -65,11 +65,15 @@
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Status
+                                    Statut
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Département
+                                    Pôle
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Actions
                                 </th>
 
                             </tr>
@@ -120,16 +124,16 @@
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm text-gray-900">Demandes d'absence</div>
+                                        <div class="text-sm text-gray-900"><?= $vacationHistoryRequests['reason']?></div>
 
                                     </td>
 
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <?= $vacationHistoryRequests['start']?>
+                                        <?= date('d/m/y H:i', strtotime($vacationHistoryRequests['start']))?>
                                     </td>
 
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <?= $vacationHistoryRequests['end']?>
+                                        <?= date('d/m/y H:i', strtotime($vacationHistoryRequests['end']))?>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <?php if ($vacationHistoryRequests['status']==1){ ?>
@@ -145,6 +149,12 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                         <?= $vacationHistoryRequests['nom']//départment de la personne?>
                                     </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+
+                                        <a href="?route=view&action=overview&id=<?= $vacationHistoryRequests['vacid'] ?>"
+                                           class="text-indigo-600 hover:text-indigo-900">Voir</a>
+                                    </td>
+
 
                                     </tr><?php } }?>
                             </tbody>

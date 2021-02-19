@@ -46,15 +46,14 @@ function authenticateControl_loginAction($login,$password)
 
 
 
-            $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], $user['active'], $user['sx'], $user['admin']);
 
-            $query = @unserialize (file_get_contents('http://ip-api.com/php/'));
-            if ($query && $query['status'] == 'success') {
-                saveIPIntoDB($query['query'],$query['city'], $query['regionName'], $query['country'] );
-            }
+
+            $_SESSION['user'] = new User($user['id'], $user['login'], $user['firstname'], $user['lastname'], $user['department_id'], SQL_initUserPermission($user['id']), $user['active'], $user['sx'], $user['admin']);
+
 
             //$_SESSION['user']=$user;
             header('location:./?route=dashboard');
+
 
         }
         else{

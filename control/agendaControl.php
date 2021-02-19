@@ -13,12 +13,12 @@ function agendaControl($userAction)
 
 function agendaControl_defaultAction()
 {
-    $tabTitle = "null";
+    $tabTitle = "Agenda";
 
 
     $message = "";
 
-    if(!empty($_POST['start']) AND !empty($_POST['end'])){
+    if (!empty($_POST['start']) and !empty($_POST['end'])) {
 
         $dateStart = $_POST['start'];
         $dateEnd = $_POST['end'];
@@ -36,7 +36,6 @@ function agendaControl_defaultAction()
         $type = 1;
 
     }
-
 
 
     include('../page/agendaPage_default.php');

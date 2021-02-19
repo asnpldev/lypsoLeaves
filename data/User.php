@@ -11,8 +11,7 @@ class User
     public int $activeAccount;
     public string $sx;
     public int $admin;
-
-
+    public string $ppower;
 
 
     /**
@@ -22,11 +21,12 @@ class User
      * @param string $fName
      * @param string $fmName
      * @param int $departementId
+     * @param string $ppower
      * @param int $activeAccount
      * @param string $sx
      * @param int $admin
      */
-    public function __construct(int $id, string $login, string $fName, string $fmName, int $departementId, int $activeAccount, string $sx, int $admin)
+    public function __construct(int $id, string $login, string $fName, string $fmName, int $departementId, string $ppower, int $activeAccount, string $sx, int $admin)
     {
         $this->id = $id;
         $this->login = $login;
@@ -36,6 +36,15 @@ class User
         $this->activeAccount = $activeAccount;
         $this->sx = $sx;
         $this->admin = $admin;
+        $this->ppower = $ppower;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPermPower(): string
+    {
+        return $this->ppower;
     }
 
 

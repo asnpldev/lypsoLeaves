@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../page/css/styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <style>body {font-family: 'Inter';}
+    <style>body {font-family: 'Inter';} ::selection{ background-color: rgba(255,255,255,0.5); }
        /* ::-webkit-scrollbar {width: 10px;}
         ::-webkit-scrollbar-track {background: #f1f1f1;}
         ::-webkit-scrollbar-thumb {background: #1F2937;}
@@ -20,6 +20,9 @@
 
 </head>
 <body>
+
+
+
 
 <nav class="bg-gray-900">
     <div class="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8">

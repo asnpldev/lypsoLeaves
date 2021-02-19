@@ -93,19 +93,19 @@
 
                                         <label for="first_name" class="block text-sm font-medium text-gray-700">Date de
                                             début</span></label>
-                                        <input type="date" name="inputStartDate" autocomplete="given-name"
+                                        <input type="datetime-local" name="inputStartDate" autocomplete="given-name"
                                                class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
                                     </div>
                                     <div class="col-span-3">
                                         <label for="last_name" class="block text-sm font-medium text-gray-700">Date de
                                             fin</label>
-                                        <input type="date" name="inputEndDate" autocomplete="family-name"
+                                        <input type="datetime-local" name="inputEndDate" autocomplete="family-name"
                                                class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
                                     </div>
                                     <div class="col-span-3">
-                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Raison (pas encore adapté)</label>
+                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Raison</label>
                                         <select type="date" name="inputReason" class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
                                             <option value="">--SELECTIONNEZ--</option>
                                             <option>[CA] Congés annuels </option>
@@ -115,7 +115,13 @@
                                             <option>[RTT] Jour de réduction du temps de travail</option>
                                         </select>
                                     </div>
-                                    <div class="col-span-3"></div>
+                                    <div class="col-span-3"
+
+                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Commentaire</label>
+                                    <input type="text" name="inputComment" autocomplete="off"
+                                           class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+
+                                </div>
 
 
                                 </div>
