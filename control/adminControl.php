@@ -19,6 +19,7 @@ function adminControl($userAction){
 function adminControl_newUserAction()
 {
     $tabTitle="Nouvel utilisateur";
+
     include('../page/adminPage_newuser.php');
 }
 
