@@ -105,40 +105,43 @@
 
                                     </div>
                                     <div class="col-span-3">
-                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Raison</label>
-                                        <select type="date" name="inputReason" class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
+                                        <label for="last_name"
+                                               class="block text-sm font-medium text-gray-700">Raison</label>
+                                        <select type="date" name="inputReason"
+                                                class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
                                             <option value="">--SELECTIONNEZ--</option>
-                                            <option>[CA] Congés annuels </option>
+                                            <option>[CA] Congés annuels</option>
                                             <option>[CS] Congés sans solde</option>
                                             <option>[CC] Congés pour événement familial</option>
-                                            <option>[AA] Absence autorisée </option>
+                                            <option>[AA] Absence autorisée</option>
                                             <option>[RTT] Jour de réduction du temps de travail</option>
                                         </select>
                                     </div>
                                     <div class="col-span-3"
 
-                                    <label for="last_name" class="block text-sm font-medium text-gray-700">Commentaire</label>
+                                    <label for="last_name"
+                                           class="block text-sm font-medium text-gray-700">Commentaire</label>
                                     <input type="text" name="inputComment" autocomplete="off"
                                            class="mt-1 p-1.5 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded">
 
                                 </div>
 
 
-                                </div>
-                            </div>
-                            <div class="px-4 py-3 bg-gray-100 text-right sm:px-6">
-                                <button type="submit"
-                                        class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                    Confirmer
-                                </button>
                             </div>
                         </div>
-                    </form>
+                        <div class="px-4 py-3 bg-gray-100 text-right sm:px-6">
+                            <button type="submit"
+                                    class="inline-flex justify-center transition duration-200 ease-in-out transform hover:translate-x-2 py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded text-indigo-600 bg-indigo-200 hover:bg-indigo-400 hover:text-indigo-900 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Confirmer
+                            </button>
+                        </div>
                 </div>
+                </form>
             </div>
-
-
         </div>
+
+
+    </div>
 
 
     </div>

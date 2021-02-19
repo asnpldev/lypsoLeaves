@@ -60,25 +60,33 @@ switch ($route) {
     case 'management':
         if ($_SESSION['user']->getPermPower() >= MANAGEMENT_PAGE) {
             managementControl($action);
-        } else { header('location:.?route=dashboard'); }
+        } else {
+            header('location:.?route=dashboard');
+        }
 
         break;
     case 'vacation':
         if ($_SESSION['user']->getPermPower() >= VACATION_PAGE) {
             vacationControl($action);
-        } else {header('location:.?route=dashboard'); }
+        } else {
+            header('location:.?route=dashboard');
+        }
 
         break;
     case 'agenda':
         if ($_SESSION['user']->getPermPower() >= AGENDA_PAGE) {
             agendaControl($action);
-        } else { header('location:.?route=dashboard'); }
+        } else {
+            header('location:.?route=dashboard');
+        }
 
         break;
     case 'view':
         if ($_SESSION['user']->getPermPower() >= VIEW_PAGE) {
             viewControl($action);
-        } else {header('location:.?route=dashboard'); }
+        } else {
+            header('location:.?route=dashboard');
+        }
         break;
 
     case 'authenticate':
@@ -88,13 +96,14 @@ switch ($route) {
     case 'admin':
         if ($_SESSION['user']->getPermPower() >= ADMIN_PAGE) {
             adminControl($action);
-        } else { header('location:.?route=dashboard'); }
+        } else {
+            header('location:.?route=dashboard');
+        }
 
         break;
     default:
         ErrorExpControl($action);
         break;
 }
-//}
 
 

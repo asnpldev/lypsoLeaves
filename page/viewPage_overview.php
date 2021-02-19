@@ -158,7 +158,7 @@
                             <a href="?route=profile&userid=<?= $managerData['user_id'] ?>"
                                class="text-blue-600 ">
                                 <?php if (!isset($managerData['id'])) {
-                                    echo '<span class="text-black">Opérateur inconnu</span>';
+                                    echo '<span class="text-yellow-600 bg-yellow-200 px-2 py-0.5 rounded-full text-sm">Demande en attente</span>';
                                 } else {
                                     if ($managerData['id'] == $_SESSION['user']->getId()) {
                                         echo '<small>' . $managerData['login'] . ' (Vous)</small>';

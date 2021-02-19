@@ -40,28 +40,43 @@ function vacationControl_storeAction()
     if (!empty($_POST['inputStartDate']) and !empty($_POST['inputEndDate']) and !empty($_POST['inputReason'])) {
 
 
-        if (strlen($_POST['inputComment']) > 50) {
+        $startTime = date('dmyHi', strtotime($_POST['inputStartDate']));
+        $endTime = date('dmyHi', strtotime($_POST['inputEndDate']));
 
-            $message = "Votre commentaire ne dois pas dépasser 50 caractères !";
-            $type = 1;
+
+        if ((int)$startTime <= (int)$endTime) {
+
+            if (strlen($_POST['inputComment']) > 50) {
+
+                $message = "Votre commentaire ne dois pas dépasser 50 caractères !";
+                $type = 1;
+
+            } else {
+
+                $datas['start'] = $_POST['inputStartDate'];
+                $datas['end'] = $_POST['inputEndDate'];
+                $datas['reason'] = $_POST['inputReason'];
+                $datas['comment'] = htmlspecialchars($_POST['inputComment']);
+
+                $dbExec = vacation_storeAction($datas);
+
+                if ($dbExec > 0) {
+                    $message = "Votre demande d'absence à été envoyée avec succès.";
+                    $type = 0;
+                } else {
+                    $message = "Il y a un problème dans la demande d'absence, veuillez vérifier quelle soit bien valide !";
+                    $type = 1;
+                }
+            }
 
         } else {
 
-            $datas['start'] = $_POST['inputStartDate'];
-            $datas['end'] = $_POST['inputEndDate'];
-            $datas['reason'] = $_POST['inputReason'];
-            $datas['comment'] = htmlspecialchars($_POST['inputComment']);
+            $message = "Impossible de prendre une date de fin avant la date de départ !";
+            $type = 1;
 
-            $dbExec = vacation_storeAction($datas);
-
-            if ($dbExec > 0) {
-                $message = "Votre demande d'absence à été envoyée avec succès.";
-                $type = 0;
-            } else {
-                $message = "Il y a un problème dans la demande d'absence, veuillez vérifier quelle soit bien valide !";
-                $type = 1;
-            }
         }
+
+
     } else {
 
         $message = "Il y a un problème dans la demande d'absence, veuillez vérifier quelle soit bien valide !";

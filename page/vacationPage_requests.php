@@ -143,6 +143,10 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                     <?= $vacationRequests['nom']//départment de la personne?>
+
+                                    &nbsp;
+                                    <a href="?route=view&action=overview&id=<?= $vacationRequests['vacid'] ?>"
+                                       class="text-indigo-600 hover:text-indigo-900">Voir</a>
                                 </td>
 
                             </tr><?php } }?>

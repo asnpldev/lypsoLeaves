@@ -32,7 +32,7 @@ function loadvac(){
 
 //DEMANDES EN COURS (qui sont en attente donc status==0)
 function user_findVacations(){
-    $request="SELECT * FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE user_id='".$_SESSION['user']->getId()."' AND status=0";
+    $request="SELECT *, vacation.id AS 'vacid' FROM vacation JOIN user ON vacation.user_id=user.id JOIN department ON user.department_id=department.id WHERE user_id='".$_SESSION['user']->getId()."' AND status=0";
     return Connection::query($request);
 }
 
